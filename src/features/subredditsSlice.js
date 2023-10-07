@@ -7,12 +7,12 @@ export const fetchSubreddits = createAsyncThunk(
         const json = await res.json()
         return json.data.children.map(subreddit => subreddit.data)
     }
-)
+);
 const initialState = {
     subReddits: [],
     isLoading: false,
     error: false
-}
+};
 
 export const subRedditsSlice = createSlice({
     name: 'subReddits',
@@ -25,6 +25,7 @@ export const subRedditsSlice = createSlice({
         },
         [fetchSubreddits.fulfilled]: (state, action) => {
             state.isLoading = false;
+            state.error = false;
             state.subReddits = action.payload;
         },
         [fetchSubreddits.rejected]: (state) => {
@@ -32,7 +33,7 @@ export const subRedditsSlice = createSlice({
             state.error = true;
         }
     }
-})
+});
 
 export default subRedditsSlice.reducer;
 

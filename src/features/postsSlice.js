@@ -70,6 +70,7 @@ export const feedSlice = createSlice({
         },
         [fetchComments.fulfilled]: (state, action) => {
             state.commentsLoading = false;
+            state.commentsError = false;
             state.comments = action.payload;
         },
         [fetchComments.rejected]: (state) => {
@@ -77,7 +78,7 @@ export const feedSlice = createSlice({
             state.commentsError = true;
         },
     }
-})
+});
 
 export const {
     setSearchTerm, 
