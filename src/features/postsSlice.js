@@ -55,7 +55,7 @@ export const feedSlice = createSlice({
             state.isLoading = true;
             state.error = false;
         },
-        [fetchPosts.fulfilled]: (state) => {
+        [fetchPosts.fulfilled]: (state, action) => {
             state.error = false;
             state.isLoading = false;
             state.posts= action.payload;
