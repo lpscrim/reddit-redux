@@ -4,8 +4,8 @@ const initialState = {
     posts: [],
     searchTerm: '',
     selectedSubreddit: 'r/pics/',
-    isLoading: false,
-    error: false
+    postsLoading: false,
+    postsError: false
 };
 
 export const postsSlice = createSlice({
@@ -15,18 +15,18 @@ export const postsSlice = createSlice({
         setPosts: (state, action) => {
             state.posts = action.payload; // Replace with posts from Reddit API
         },
-        setPostsLoading: (state, action) => {
-            state.isLoading = true;
-            state.error = false;
+        getPostsStart: (state) => {
+            state.postsLoading = true;
+            state.postsError = false;
         },
-        setPostsSuccess: (state, action) => {
-            state.error = false;
-            state.isLoading = false;
-            //state.posts= action.payload;
+        getPostsSuccess: (state) => {
+            state.postsError = false;
+            state.postsLoading = false;
+            state.posts= action.payload;
         },
-        setPostsFailed: (state, action) => {
-            state.error = true;
-            state.isLoading = false;
+        getPostsFailed: (state) => {
+            state.postsError = true;
+            state.postsLoading = false;
         },
         setSearchTerm: (state, action) => {
             state.searchTerm = action.payload; 
@@ -43,9 +43,9 @@ export const postsSlice = createSlice({
 
 export const {
     setPosts, 
-    setPostsLoading, 
-    setPostsSuccess, 
-    setPostsFailed, 
+    getPostsStart, 
+    getPostsSuccess, 
+    getPostsFailed, 
     setSearchTerm, 
     setSelectedSubreddit, 
     setFetchingData 
