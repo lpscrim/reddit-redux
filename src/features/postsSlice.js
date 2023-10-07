@@ -50,7 +50,7 @@ export const feedSlice = createSlice({
     },
 
     extraReducers: { 
-        
+
         [fetchPosts.pending]: (state) => {
             state.isLoading = true;
             state.error = false;
@@ -86,4 +86,9 @@ export const {
 } = postsSlice.actions;
 
 export default postsSlice.reducer;
+
+export const selectPosts = state => state.posts.posts;
+export const selectSelectedSubreddit = state => state.posts.selectedSubreddit;
+export const selectSearchTerm =  state => state.posts.searchTerm;
+export const selectComments = state => state.posts.comments;
 
