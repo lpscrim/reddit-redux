@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
 export const fetchSubreddits = createAsyncThunk(
-    'subReddits/fetchSubReddits',
+    'subreddits/fetchSubreddits',
     async () => {
         const res = await fetch(`https://www.reddit.com/subreddits.json`)
         const json = await res.json()
@@ -9,13 +9,13 @@ export const fetchSubreddits = createAsyncThunk(
     }
 );
 const initialState = {
-    subReddits: [],
+    subreddits: [],
     isLoading: false,
     error: false
 };
 
-export const subRedditsSlice = createSlice({
-    name: 'subReddits',
+export const subredditsSlice = createSlice({
+    name: 'subreddits',
     initialState,
     reducers: {},
     extraReducers: {
@@ -26,7 +26,7 @@ export const subRedditsSlice = createSlice({
         [fetchSubreddits.fulfilled]: (state, action) => {
             state.isLoading = false;
             state.error = false;
-            state.subReddits = action.payload;
+            state.subreddits = action.payload;
         },
         [fetchSubreddits.rejected]: (state) => {
             state.isLoading = false;
@@ -35,6 +35,6 @@ export const subRedditsSlice = createSlice({
     }
 });
 
-export default subRedditsSlice.reducer;
+export default subredditsSlice.reducer;
 
-export const selectSubreddit = state => state.subReddits.subReddits;
+export const selectSubreddit = state => state.subreddits.subreddits;

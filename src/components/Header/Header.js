@@ -5,6 +5,7 @@ import store from '../../store/store';
 
 export const Header = () => {
     const [searchTermLocal, setSeachTermLocal] = useState('');
+    
     const dispatch = useDispatch();
     const searchItem = useSelector((state) => (state.posts.searchTerm))
     
