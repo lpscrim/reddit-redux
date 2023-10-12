@@ -43,10 +43,10 @@ export const Header = () => {
                     id='search-icon'>
                 </img>
                 <input
-                className='search-bar'
-                onChange={handleChange}
-                placeholder='Search Subreddits'
-                value={searchTermLocal}>
+                    className='search-bar'
+                    onChange={handleChange}
+                    placeholder='Search Subreddits'
+                    value={searchTermLocal}>
                 </input>
                 <div className='search-box'>
                     <SearchResults />
