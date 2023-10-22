@@ -4,6 +4,7 @@ import { UseSelector, useDispatch, useSelector } from 'react-redux';
 import store from '../../store/store';
 import { selectSearchTerm, setSearchTerm, setSelectedSubreddit } from '../../features/postsSlice';
 //import { SearchResults } from '../SearhResults/SearchResults';
+import { RedditLogo, MagnifyingGlass } from '@phosphor-icons/react';
 
 
 export const Header = () => {
@@ -29,19 +30,11 @@ export const Header = () => {
     return (
         <div className='header'>
             <div className='title'>
-                <img 
-                    src='/reddit-icon.img'
-                    alt='logo'
-                    id='logo'>
-                </img>
+                <RedditLogo size={32}/>
                 <span>REDDIT?</span>
             </div>
             <form onSubmit={handleSubmit}>
-                <img 
-                    src='/search-icon.png'
-                    alt='search-icon'
-                    id='search-icon'>
-                </img>
+                <MagnifyingGlass size={28}/>
                 <input
                     className='search-bar'
                     onChange={handleChange}
