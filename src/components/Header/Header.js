@@ -1,6 +1,6 @@
 import './header.css';
 import React, { useState, useEffect } from 'react';
-import { UseSelector, useDispatch, useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import store from '../../store/store';
 import { selectSearchTerm, setSearchTerm, setSelectedSubreddit } from '../../features/postsSlice';
 //import { SearchResults } from '../SearhResults/SearchResults';

@@ -1,8 +1,7 @@
 import React from "react";
-import './FeedLoading.css'
+import './PostLoading.css'
 
-export function FeedLoading() {
-
+export const PostLoading = () => {
     return (
         <li className="post">
             <div className="score">
@@ -20,5 +19,5 @@ export function FeedLoading() {
                 </div>
             </div>
         </li>
-)
+    )
 }
