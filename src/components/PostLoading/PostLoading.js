@@ -1,4 +1,5 @@
 import React from "react";
+import { SpinnerGap } from "@phosphor-icons/react";
 import './PostLoading.css'
 
 export const PostLoading = () => {
@@ -11,7 +12,19 @@ export const PostLoading = () => {
             </div>
             <div className="right-side">
                 <div className="top">
-                    <div class="loader"><span class="loader__dot">.</span><span class="loader__dot">.</span><span class="loader__dot">.</span></div>
+                    <div class="loader">
+                        <SpinnerGap size={30}>
+                            <animateTransform
+                                attributeName="transform"
+                                attributeType="XML"
+                                type="rotate"
+                                dur="5s"
+                                from="0 0 0"
+                                to="360 0 0"
+                                repeatCount="indefinite"
+                            ></animateTransform>
+                        </SpinnerGap>
+                    </div>
                 </div>
                 <div className="bottom">
                     <p className="subreddit"></p>  
