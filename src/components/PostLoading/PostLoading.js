@@ -12,7 +12,7 @@ export const PostLoading = () => {
             </div>
             <div className="right-side">
                 <div className="top">
-                    <div class="loader">
+                    <div className="loader">
                         <SpinnerGap size={30}>
                             <animateTransform
                                 attributeName="transform"
