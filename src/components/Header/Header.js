@@ -1,5 +1,5 @@
 import './Header.css';
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import store from '../../store/store';
 import { selectSearchTerm, setSearchTerm, setSelectedSubreddit } from '../../features/postsSlice';
