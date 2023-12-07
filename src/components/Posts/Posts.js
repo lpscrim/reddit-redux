@@ -59,7 +59,7 @@ export const Posts = () => {
                         url_overridden_by_dest: gif, 
                         post_hint: mediaType, 
                         domain, 
-                        gallery_data: galleryData, 
+                        is_gallery: isGallery,
                         selftext: text, 
                         permalink, 
                         id, 
@@ -76,7 +76,7 @@ export const Posts = () => {
                             gif={gif} 
                             mediaType={mediaType} 
                             domain={domain} 
-                            galleryData={galleryData} 
+                            isGallery={isGallery}
                             text={text} 
                             permalink={permalink} 
                             id={id} 

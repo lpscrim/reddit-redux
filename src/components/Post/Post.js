@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import store from "../../store/store";
 import { useDispatch, useSelector } from "react-redux";
-import { setSelectedSubreddit } from "../../features/postsSlice";
+import { fetchComments, setSelectedSubreddit } from "../../features/postsSlice";
 import { Chats, ArrowCircleUp } from "@phosphor-icons/react";
 
 export const Post = props => {
@@ -12,15 +12,68 @@ export const Post = props => {
     const posts = useSelector((state) => state.posts);
     const commentList = '';
     
+    const toggleComments = () => {
+        if(showComments === 'hidden') {
+            dispatch(fetchComments(props.permalink));
+            setShowComments('show');
+        }
+        if(showComments === 'show') {
+            setShowComments('hidden');
+        }
+    }
+    
     const handleClick = () => {
 
+        if (isActive === 'inactive') {
+            setIsActive('active')
+            document.getElementById(props.title).scrollIntoView(false)
+        } if(isActive === 'active') {
+            setIsActive('inactive')
+        } if(showComments === 'show') {
+            setShowComments('hidden')
+        }
     }
 
-    const toggleComments = () => {
-
-    }
 
     const content = () => {
+
+        if(props.mediaType === 'image') {
+            return (
+                <img src={props.fullImage} alt=''></img>
+            )
+        }
+
+        if(props.mediaType === 'hosted:video') {
+            return (
+                <video className="reddit-video" controls>
+                    <source src={props.media.reddit_video.fallback_url} type="video/mp4" ></source>
+                </video>
+            )
+        }
+
+        if(props.mediaType === "link") {
+            return (
+                <div className="link">
+
+                </div>
+            )
+        }
+
+        if(props.isGallery === true) {
+            return (
+                <div className="gallery">
+
+                </div>
+            )
+        }
+
+        if(props.text) {
+            return (
+                <div className="text">
+                    
+                </div>
+            )
+        }
 
     }
 
