@@ -3,8 +3,9 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import store from '../../store/store';
 import { selectSearchTerm, setSearchTerm, setSelectedSubreddit } from '../../features/postsSlice';
-//import { SearchResults } from '../SearhResults/SearchResults';
+import { SearchResults} from '../SearchResults/SearchResults';
 import { RedditLogo, MagnifyingGlass } from '@phosphor-icons/react';
+import { fetchSearch } from '../../features/searchSlice';
 
 
 export const Header = () => {
@@ -17,7 +18,7 @@ export const Header = () => {
         dispatch(setSearchTerm(e.target.value));
     };
     
-    useEffect(() =>{
+    useEffect(() => {
         dispatch(fetchSearch(state.posts.searchTerm))
     }, [state.posts.searchTerm]);
 

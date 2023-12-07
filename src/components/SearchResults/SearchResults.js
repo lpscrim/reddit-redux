@@ -4,12 +4,13 @@ import './SearchResults.css';
 import { selectSearchResults } from "../../features/searchSlice";
 import { useSelector } from "react-redux/es/hooks/useSelector";
 import { ResultsLoading } from "./ResultsLoading";
+import { Result } from "./Result";
 
 export const SearchResults = () => {
 
     const results = useSelector(selectSearchResults);
     const state = store.getState();
-    const resultsList = '';
+    let resultsList = '';
 
     if(!results) {
         return (
