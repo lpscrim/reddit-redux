@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { selectSubreddits, fetchSubreddits } from "../../features/subredditsSlice";
 import store from "../../store/store";
 import { Subreddit } from "../Subreddit/Subreddit";
-import { SpinnerGap } from "@phosphor-icons/react";
 
 export const SubredditList = () => {
 
@@ -14,7 +13,7 @@ export const SubredditList = () => {
         return (
             <Subreddit 
                 name={sub.display_name_prefixed}
-                img={sub.img}
+                img={sub.icon_img}
                 id={sub.id}
             />
         )
@@ -28,23 +27,17 @@ export const SubredditList = () => {
         return (
             <div className="subredditList">
             <ul>
-              {[...Array(13)].map((_, index) => (
-                <li key={index}>
-                  <button>
-                  <SpinnerGap size={14}>
-                            <animateTransform
-                                attributeName="transform"
-                                attributeType="XML"
-                                type="rotate"
-                                dur="5s"
-                                from="0 0 0"
-                                to="360 0 0"
-                                repeatCount="indefinite"
-                            ></animateTransform>
-                        </SpinnerGap>
-                  </button>
-                </li>
-              ))}
+                    <li><button></button></li>
+                    <li><button></button></li>
+                    <li><button></button></li>
+                    <li><button></button></li>
+                    <li><button></button></li>
+                    <li><button></button></li>
+                    <li><button></button></li>
+                    <li><button></button></li>
+                    <li><button></button></li>
+                    <li><button></button></li>
+                    <li><button></button></li>
             </ul>
           </div>
         )

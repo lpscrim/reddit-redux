@@ -10,7 +10,7 @@ export const fetchSubreddits = createAsyncThunk(
 );
 const initialState = {
     subreddits: [],
-    isLoading: false,
+    isLoading: true,
     error: false
 };
 

@@ -13,11 +13,15 @@ export const Subreddit = (props) => {
     };
 
     const handleClick = () => {
-        dispatch(setSelectedSubreddit(name));
+        if(props.name === 'r/Home') {
+            dispatch(setSelectedSubreddit('r/popular'))
+        } else {
+        dispatch(setSelectedSubreddit(props.name))
+        }
     };
 
     return (
-        <li>
+        <li key={props.id}>
             <button onClick={handleClick}>
                 <img src={props.img} alt=''></img>
                 <span>{name}</span>

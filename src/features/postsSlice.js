@@ -24,7 +24,7 @@ const initialState = {
     posts: [],
     searchTerm: '',
     selectedSubreddit: 'r/pics/',
-    filter: '',
+    filter: 'top',
     isLoading: false,
     error: false,
     comments: [],
@@ -32,7 +32,7 @@ const initialState = {
     commentsError: false
 };
 
-export const feedSlice = createSlice({
+export const postsSlice = createSlice({
     name: 'posts',
     initialState,
     reducers: {
@@ -42,7 +42,7 @@ export const feedSlice = createSlice({
         },
         setSelectedSubreddit: (state, action) => {
             state.selectedSubreddit = action.payload;
-            state.searchTerm = '';
+//            state.searchTerm = '';
         },
         setFilter: (state, action) => {
             state.filter = action.payload;

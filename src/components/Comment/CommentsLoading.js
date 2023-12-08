@@ -2,7 +2,7 @@ import React from "react";
 import './Comment.css';
 import { SpinnerGap } from "@phosphor-icons/react";
 
-export function commentsLoading() {
+export function CommentsLoading() {
 
     return (
         <div className="comment">

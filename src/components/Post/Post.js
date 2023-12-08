@@ -5,6 +5,7 @@ import { fetchComments, setSelectedSubreddit } from "../../features/postsSlice";
 import { Chats, ArrowCircleUp } from "@phosphor-icons/react";
 import { Comment } from "../Comment/Comment";
 import { NoComments } from "../Comment/NoComments";
+import { CommentsLoading } from "../Comment/CommentsLoading";
 
 
 export const Post = props => {
@@ -124,16 +125,13 @@ export const Post = props => {
                     </div>
                 </li>
                 <div className={showComments} id="comments">
-                    <commentsLoading />
-                    <commentsLoading />
-                    <commentsLoading />
-                    <commentsLoading />
-                    <commentsLoading />
-                    <commentsLoading />
-                    <commentsLoading />
-                    <commentsLoading />
-                    <commentsLoading />
-                    <commentsLoading />
+                    <CommentsLoading />
+                    <CommentsLoading />
+                    <CommentsLoading />
+                    <CommentsLoading />
+                    <CommentsLoading />
+                    <CommentsLoading />
+                    <CommentsLoading />
                 </div>
             </div>
         )
