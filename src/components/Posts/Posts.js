@@ -16,7 +16,7 @@ export const Posts = () => {
 
     useEffect(() => {
         dispatch(fetchPosts({selectedSubreddit, filter}))
-    }, [selectedSubreddit, filter])
+    }, [dispatch, selectedSubreddit, filter])
     
     if(isLoading) {
         return (

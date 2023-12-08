@@ -14,15 +14,15 @@ export const SubredditList = () => {
         return (
             <Subreddit 
                 name={sub.display_name_prefixed}
-                img={img}
-                id={id}
+                img={sub.img}
+                id={sub.id}
             />
         )
     })
 
     useEffect(() => {
         dispatch(fetchSubreddits())
-    }, [])
+    }, [dispatch])
 
     if(state.subreddits.isLoading) {
         return (

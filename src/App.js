@@ -5,6 +5,7 @@ import { Provider } from 'react-redux';
 import { Header } from './components/Header/Header';
 import { Filter } from './components/Filter/Filter';
 import { Posts } from './components/Posts/Posts';
+import { SubredditList } from './components/SubredditList/SubredditList';
 
 
 function App() {
@@ -15,7 +16,7 @@ function App() {
         <div className='main'>
           <div className='side-bar'>
             <Filter />
-          //subredditslist
+            <SubredditList />
           </div>
           <Posts />
         </div>
