@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import './Post.css';
 import { useDispatch, useSelector } from "react-redux";
 import { fetchComments, setSelectedSubreddit } from "../../features/postsSlice";
@@ -13,7 +13,7 @@ export const Post = props => {
     const [showComments, setShowComments] = useState('hidden');
     const dispatch = useDispatch();
     const posts = useSelector((state) => state.posts);
-    const commentList = '';
+    let commentList = '';
     
     const toggleComments = () => {
         if(showComments === 'hidden') {
@@ -58,7 +58,7 @@ export const Post = props => {
             return (
                 <div className="link">
                     <p>Click for full article</p>
-                    <a href={props.fullImage} target="_blank" rel="noreferrer"><img src={thumbnail} alt=""></img></a>
+                    <a href={props.fullImage} target="_blank" rel="noreferrer"><img src={props.thumbnail} alt=""></img></a>
                 </div>
             )
         }
@@ -67,7 +67,7 @@ export const Post = props => {
             return (
                 <div className="gallery">
                     <p>Click for full gallery</p>
-                    <a href={props.fullImage} target="_blank" rel="noreferrer"><img src={thumbnail} alt=""></img></a>
+                    <a href={props.fullImage} target="_blank" rel="noreferrer"><img src={props.thumbnail} alt=""></img></a>
                 </div>
             )
         }
@@ -87,7 +87,7 @@ export const Post = props => {
         posts.comments.slice(0, 11).map(comment => {
             return (
                 <Comment
-                    key={id}
+                    key={comment.id}
                     body={comment.body}
                     author={comment.author}
                     score={comment.ups}

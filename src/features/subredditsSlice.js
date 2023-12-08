@@ -37,4 +37,4 @@ export const subredditsSlice = createSlice({
 
 export default subredditsSlice.reducer;
 
-export const selectSubreddit = state => state.subreddits.subreddits;
+export const selectSubreddits = state => state.subreddits.subreddits;

@@ -1,7 +1,7 @@
 import React from "react";
 import './Comment.css';
 
-export const NoComment = () => {
+export const NoComments = () => {
 
     return (
         <div className="comment">

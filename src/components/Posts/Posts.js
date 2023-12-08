@@ -4,6 +4,7 @@ import { PostLoading } from "../PostLoading/PostLoading";
 import { Post } from "../Post/Post";
 import { PostsError } from "../PostsError/PostsError";
 import "./Posts.css";
+import store from "../../store/store";
 import { fetchPosts, selectPosts } from "../../features/postsSlice";
 
 export const Posts = () => {

@@ -8,7 +8,7 @@ export const PostLoading = () => {
             <div className="score">
             </div>
             <div className="left-side">
-                <img src=''></img>
+                <img src='' alt='loading...'></img>
             </div>
             <div className="right-side">
                 <div className="top">
