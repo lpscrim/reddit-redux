@@ -15,6 +15,7 @@ export const SubredditList = () => {
                 name={sub.display_name_prefixed}
                 img={sub.icon_img}
                 id={sub.id}
+                key={sub.id}
             />
         )
     })

@@ -4,18 +4,16 @@ import { PostLoading } from "../PostLoading/PostLoading";
 import { Post } from "../Post/Post";
 import { PostsError } from "../PostsError/PostsError";
 import "./Posts.css";
-import store from "../../store/store";
-import { fetchPosts, selectPosts } from "../../features/postsSlice";
+import { fetchPosts } from "../../features/postsSlice";
 
 export const Posts = () => {
 
     const dispatch = useDispatch();
-    const state = store.getState();
-    const posts = useSelector(selectPosts);
-    const { isLoading, error, selectedSubreddit, filter } = state.posts;
+    const posts = useSelector((state) => state.posts);
+    const { isLoading, error, selectedSubreddit, filter } = posts;
 
     useEffect(() => {
-        dispatch(fetchPosts({selectedSubreddit, filter}))
+        dispatch(fetchPosts({selectedSubreddit, filter}));
     }, [dispatch, selectedSubreddit, filter])
     
     if(isLoading) {
@@ -49,8 +47,8 @@ export const Posts = () => {
         return (
             <div className="posts">
                 <ul>
-                    <h3 className="feed-title">{filter} posts in the selected sub ({selectedSubreddit})</h3>
-                    {posts.map(({ 
+                    <h3 className="feed-title">{filter} posts in ({selectedSubreddit})</h3>
+                    {posts.posts.map(({ 
                         title, 
                         subreddit_name_prefixed: subreddit, 
                         author, 

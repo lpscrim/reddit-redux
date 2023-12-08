@@ -21,7 +21,7 @@ export const Subreddit = (props) => {
     };
 
     return (
-        <li key={props.id}>
+        <li >
             <button onClick={handleClick}>
                 <img src={props.img} alt=''></img>
                 <span>{name}</span>

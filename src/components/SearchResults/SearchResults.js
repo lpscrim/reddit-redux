@@ -14,7 +14,7 @@ export const SearchResults = () => {
 
     if(!results) {
         return (
-            <div ClassName="results-list">
+            <div className="results-list">
                 <p>No Subreddits found!</p>
             </div>
         )
