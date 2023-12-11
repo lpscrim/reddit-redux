@@ -1,0 +1,103 @@
+.header {
+    display: flex;
+    margin: .25rem;
+    margin-top: 0;
+    justify-content: space-between;
+    align-items: center;
+    height: 4rem;
+    border-radius: 10px;
+    width: 99%;
+    background-color: rgb(255, 255, 255);
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+.header input {
+    width: 20rem;
+    height: 2rem;
+    float: right;
+    margin-left: 0;
+    margin-right: 10rem;
+    border-radius: 5px;
+    padding-left: 2.3rem;
+    padding-top: .2rem;
+    color: white;
+    cursor: default;
+    box-shadow: none;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: 400;
+    background-color: rgba(146, 146, 146, 0.771);
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+.header form:hover input {
+    background-color: rgba(129, 129, 129, 0.897);
+    transition-property: background-color;
+    transition-duration: .5s;
+
+}
+
+.header input:hover {
+    font-size: 1.2rem;
+}
+
+.header input:focus {
+    background-color: rgba(225, 225, 225, 0.211);
+    outline: none;
+    font-size: 1rem;
+
+}
+
+.header input::placeholder {
+    color: white;
+    font-weight: 200;
+}
+
+.header form {
+    position: relative;
+}
+
+.search-bar:focus + .search-box {
+    display: block;
+    width: 100%;
+    position: absolute;
+}
+
+.search-box {
+    display: none;
+}
+
+@media (max-width: 480px) {
+    .header {
+      height: 8vw;
+      width: 98%;
+    }
+
+    .header input {
+      width: 35vw;
+      height: 5vw;
+      margin-left: 3vw;
+      margin-right: 0;
+      padding-left: 2vw;
+      font-size: 3vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+      height: 8%;
+    }
+  
+    .header input {
+      width: 25vw;
+      height: 5vw;
+      margin-right: 4vw;
+      font-size: 2vw;
+    }
+  
+    .header input:focus {
+      font-size: .5rem;
+    }
+}
