@@ -31,8 +31,8 @@ export const Header = () => {
     return (
         <div className='header'>
             <div className='title'>
-                <RedditLogo size={32}/>
-                <span>REDDIT?</span>
+                <RedditLogo size={38}/>
+                <h4>REDDIT?</h4>
             </div>
             <form onSubmit={handleSubmit}>
                 <MagnifyingGlass size={28}/>

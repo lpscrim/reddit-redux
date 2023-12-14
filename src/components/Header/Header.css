@@ -12,6 +12,21 @@
     transition-duration: .5s;
 }
 
+.header .title {
+    align-items: center;
+    display: flex;
+    margin: 0.5rem;
+    padding: 1rem;
+    font-family: "buffalo";
+    font-weight: bolder;
+    font-size: 1.5rem;
+    justify-content: space-between;
+}
+
+.header h4 {
+    margin-left: 0.5rem;
+}
+
 .header input {
     width: 20rem;
     height: 2rem;
