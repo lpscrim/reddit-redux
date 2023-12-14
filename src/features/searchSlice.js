@@ -27,7 +27,7 @@ export const searchSlice = createSlice({
         [fetchSearch.fulfilled]: (state, action) => {
             state.isLoading = false;
             state.error = false;
-            state.redults = action.payload;
+            state.results = action.payload;
         },
         [fetchSearch.rejected]: (state) => {
             state.isLoading = false;

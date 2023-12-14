@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { setSearchTerm, setSelectedSubreddit } from "../../features/postsSlice";
-
+import "./SearchResults.css";
 
 export const Result = (props) => {
 
@@ -14,9 +14,13 @@ export const Result = (props) => {
 
     return (
         <li className="result" onClick={handleClick}>
-            <img src={props.icon} alt=""></img>
-            <h4>{props.name}</h4>
-            <h2>{props.subs}</h2>
+            <div className="left">
+                <img src={props.icon} alt=""></img>
+                <h4>{props.name}</h4>
+            </div>
+            <div className="right">
+                <h4>{props.subs}</h4>
+            </div>
         </li>
     )
 }

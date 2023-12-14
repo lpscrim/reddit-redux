@@ -2,7 +2,7 @@ import React from "react";
 import store from "../../store/store";
 import './SearchResults.css';
 import { selectSearchResults } from "../../features/searchSlice";
-import { useSelector } from "react-redux/es/hooks/useSelector";
+import { useSelector } from "react-redux";
 import { ResultsLoading } from "./ResultsLoading";
 import { Result } from "./Result";
 
@@ -22,7 +22,6 @@ export const SearchResults = () => {
 
     if(state.search.isLoading) {
         resultsList = '';
-
         return (
             <ResultsLoading />
         )

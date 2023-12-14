@@ -8,21 +8,22 @@
     transition-duration: .5s;
 }
 
-.filter .filter-text {
+.filter-title {
     text-align: center;
     padding: 0;
     width: 100%;
 }
 
-.filter .filter-text p {
+.filter-title p {
     padding: 0;
     margin: 0;
 }
 
-.filter .containter {
+.filter .container {
     display: flex;
     justify-content: center;
     width: 100%;
+    flex-direction: row;
 }
 
 .filter .card {
@@ -60,7 +61,7 @@
     cursor: pointer;
 }
 
-.filter .card img {
+.filter .card .img {
     height: 2.5rem;
     margin: 0;
     padding: 0;
@@ -83,7 +84,7 @@
         width: 7vw;
     }
 
-    .filter .card img {
+    .filter .card .img {
         margin-top: .5vw;
         height: 4vw;
     }
@@ -100,7 +101,7 @@
         width: 6vw;
     }
 
-    .filter .card img {
+    .filter .card .img {
         margin-top: .5vw;
         height: 4vw;
     }
@@ -117,7 +118,7 @@
         width: 6vw;
     }
 
-    .filter .card img {
+    .filter .card .img {
         margin-top: .5vw;
         height: 4vw;
     }

@@ -1,4 +1,5 @@
 import React from "react";
+import "./Filter.css";
 import { useDispatch } from "react-redux";
 import { setFilter } from "../../features/postsSlice";
 import { ShootingStar, ThumbsUp, ChartLineUp } from "@phosphor-icons/react";
@@ -33,17 +34,17 @@ export const Filter = () => {
             <div className="filter-title">
                 <p>Filter by:</p>
             </div>
-            <div className="filter-container">
-                <div className="fitler-card" id="top" onClick={handleClickTop}>
-                    <ChartLineUp size={28}/>
+            <div className="container">
+                <div className="card" id="top" onClick={handleClickTop}>
+                    <ChartLineUp className="img" size={40}/>
                     <p>Top</p>
                 </div>
-                <div className="filter-card" id="best" onClick={handleClickBest}>
-                    <ThumbsUp size={28}/>
+                <div className="card" id="best" onClick={handleClickBest}>
+                    <ThumbsUp className="img" size={40}/>
                     <p>Best</p>
                 </div>
-                <div className="filter-card" id="new" onClick={handleClickNew}>
-                    <ShootingStar size={28}/>
+                <div className="card" id="new" onClick={handleClickNew}>
+                    <ShootingStar className="img" size={40}/>
                     <p>New</p>
                 </div>
             </div>

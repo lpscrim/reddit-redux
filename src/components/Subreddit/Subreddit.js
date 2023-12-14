@@ -23,7 +23,6 @@ export const Subreddit = (props) => {
     return (
         <li >
             <button onClick={handleClick}>
-                <img src={props.img} alt=''></img>
                 <span>{name}</span>
             </button>
         </li>

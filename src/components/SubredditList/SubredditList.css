@@ -20,9 +20,11 @@
 
 }
 
+
+
 .subredditList li {
-    display: flex;
     justify-content: left;
+    display: flex;
 }
 
 .subredditList button {
