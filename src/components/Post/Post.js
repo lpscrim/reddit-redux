@@ -58,7 +58,8 @@ export const Post = (props) => {
     }
 
     if(props.thumbnail) {
-        thumbnail= props.thumbnail;
+        thumbnail = props.thumbnail;
+
     } if(thumbnail.includes('nsfw')) {
         thumbnail = '/nsfw.png';
     }
