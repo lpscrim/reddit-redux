@@ -11,7 +11,7 @@ export function CommentsLoading() {
                     attributeName="transform"
                     attributeType="XML"
                     type="rotate"
-                    dur="5s"
+                    dur="0.6s"
                     from="0 0 0"
                     to="360 0 0"
                     repeatCount="indefinite"

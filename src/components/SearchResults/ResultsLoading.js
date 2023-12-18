@@ -11,7 +11,7 @@ export const ResultsLoading = () => {
                                 attributeName="transform"
                                 attributeType="XML"
                                 type="rotate"
-                                dur="2s"
+                                dur="0.6s"
                                 from="0 0 0"
                                 to="360 0 0"
                                 repeatCount="indefinite"
@@ -24,7 +24,7 @@ export const ResultsLoading = () => {
                                 attributeName="transform"
                                 attributeType="XML"
                                 type="rotate"
-                                dur="2s"
+                                dur="0.6s"
                                 from="0 0 0"
                                 to="360 0 0"
                                 repeatCount="indefinite"
@@ -37,7 +37,33 @@ export const ResultsLoading = () => {
                                 attributeName="transform"
                                 attributeType="XML"
                                 type="rotate"
-                                dur="2s"
+                                dur="0.6s"
+                                from="0 0 0"
+                                to="360 0 0"
+                                repeatCount="indefinite"
+                            ></animateTransform>
+                        </SpinnerGap>
+            </div>
+            <div className="loader">
+                        <SpinnerGap size={28}>
+                            <animateTransform
+                                attributeName="transform"
+                                attributeType="XML"
+                                type="rotate"
+                                dur="0.6s"
+                                from="0 0 0"
+                                to="360 0 0"
+                                repeatCount="indefinite"
+                            ></animateTransform>
+                        </SpinnerGap>
+            </div>
+            <div className="loader">
+                        <SpinnerGap size={28}>
+                            <animateTransform
+                                attributeName="transform"
+                                attributeType="XML"
+                                type="rotate"
+                                dur="0.6s"
                                 from="0 0 0"
                                 to="360 0 0"
                                 repeatCount="indefinite"
