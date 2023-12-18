@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import './Post.css';
 import { useDispatch, useSelector } from "react-redux";
 import { fetchComments, setSelectedSubreddit } from "../../features/postsSlice";
@@ -8,15 +8,34 @@ import { NoComments } from "../Comment/NoComments";
 import { CommentsLoading } from "../Comment/CommentsLoading";
 
 
-export const Post = props => {
+export const Post = (props) => {
 
     const [isActive, setIsActive] = useState('inactive');
     const [showComments, setShowComments] = useState('hidden');
     const dispatch = useDispatch();
     const posts = useSelector((state) => state.posts);
     let commentList = '';
+    let thumbnail = '';
+    const ref = useRef(null);
+
+    const handleOffClick = (e) => {
+        if (ref.current && !ref.current.contains(e.target)) {
+          setIsActive('inactive');
+          setShowComments('hidden');
+        }
+      };
+
+      useEffect(() => {
+        document.addEventListener('click', handleOffClick)
     
-    const toggleComments = () => {
+        return () => {
+          document.removeEventListener('click', handleOffClick)
+        }
+      }, [ref]);
+    
+    const toggleComments = (e) => {
+        e.stopPropagation();
+        
         if(showComments === 'hidden') {
             dispatch(fetchComments(props.permalink));
             setShowComments('show');
@@ -36,6 +55,12 @@ export const Post = props => {
         } if(showComments === 'show') {
             setShowComments('hidden')
         }
+    }
+
+    if(props.thumbnail) {
+        thumbnail= props.thumbnail;
+    } if(thumbnail.includes('nsfw')) {
+        thumbnail = '/nsfw.png';
     }
 
 
@@ -59,7 +84,7 @@ export const Post = props => {
             return (
                 <div className="link">
                     <p>Click for full article</p>
-                    <a href={props.fullImage} target="_blank" rel="noreferrer"><img src={props.thumbnail} alt=""></img></a>
+                    <a href={props.fullImage} target="_blank" rel="noreferrer"><img src={thumbnail} alt=""></img></a>
                 </div>
             )
         }
@@ -68,7 +93,7 @@ export const Post = props => {
             return (
                 <div className="gallery">
                     <p>Click for full gallery</p>
-                    <a href={props.fullImage} target="_blank" rel="noreferrer"><img src={props.thumbnail} alt=""></img></a>
+                    <a href={props.fullImage} target="_blank" rel="noreferrer"><img src={thumbnail} alt=""></img></a>
                 </div>
             )
         }
@@ -102,7 +127,7 @@ export const Post = props => {
             <div className={isActive} id={props.title} onClick={handleClick}>
                 <li className="post" id={isActive}>
                     <div className="left-side">
-                        <img src={props.thumbnail} alt=""></img>
+                        <img src={thumbnail} alt=""></img>
                     </div>
                     <div className="right-side">
                         <div className="top">
@@ -116,7 +141,7 @@ export const Post = props => {
                             {content()}
                         </div>
                     </div>
-                    <button className="comments-toggle" onClick={toggleComments}>
+                    <button className="comments-toggle" onClick={(e) => toggleComments(e)}>
                         <Chats size={28} />Comments
                     </button>
                     <div className="score">
@@ -138,10 +163,10 @@ export const Post = props => {
     } else {
 
     return (
-        <div className={isActive} id={props.title} onClick={handleClick}>
+        <div className={isActive} id={props.title} onClick={handleClick} ref={ref}>
             <li className="post" id={isActive}>
                 <div className="left-side">
-                    <img src={props.thumbnail} alt=""></img>
+                    <img src={thumbnail} alt=""></img>
                 </div>
                 <div className="right-side">
                     <div className="top">
@@ -155,7 +180,7 @@ export const Post = props => {
                         {content()}
                     </div>
                 </div>
-                <button className="comments-toggle" onClick={toggleComments}>
+                <button className="comments-toggle" onClick={(e) => toggleComments(e)}>
                     <Chats size={28} />Comments
                 </button>
                 <div className="score">
