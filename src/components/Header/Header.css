@@ -17,7 +17,7 @@
     display: flex;
     margin: 0.5rem;
     padding: 1rem;
-    font-family: "buffalo";
+    font-family: 'Courier New', Courier, monospace;
     font-weight: bolder;
     font-size: 1.5rem;
     justify-content: space-between;
@@ -36,7 +36,7 @@
     border-radius: 5px;
     padding-left: 2.3rem;
     padding-top: .2rem;
-    color: white;
+    color: black;
     cursor: default;
     box-shadow: none;
     border: none;
@@ -66,7 +66,7 @@
 }
 
 .header input::placeholder {
-    color: white;
+    color: black;
     font-weight: 200;
 }
 

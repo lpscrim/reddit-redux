@@ -49,7 +49,7 @@ export const Post = (props) => {
 
         if (isActive === 'inactive') {
             setIsActive('active')
-            document.getElementById(props.title).scrollIntoView(false)
+            document.getElementById(props.title).scrollIntoView({behavior:"smooth", block: "center"})
         } if(isActive === 'active') {
             setIsActive('inactive')
         } if(showComments === 'show') {
@@ -172,7 +172,7 @@ export const Post = (props) => {
                 <div className="right-side">
                     <div className="top">
                         <p className="subreddit" onClick={() => dispatch(setSelectedSubreddit(props.subreddit))}>{props.subreddit}</p>
-                        <p className="author">OP: u/{props.author}</p>
+                        <p className="author">u/{props.author}</p>
                     </div>
                     <div className="bottom">
                         <h3 className="title">{props.title}</h3>

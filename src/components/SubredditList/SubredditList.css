@@ -3,7 +3,6 @@
     width: 100%;
     display: block;
     margin: 0 .25rem 0 .25rem;
-    
 }
 
 .subredditList ul {
@@ -17,7 +16,6 @@
     padding-right: 0;
     list-style-type: none;
     margin-top: .6rem;
-
 }
 
 
@@ -43,6 +41,6 @@
 }
 
 .subredditList button:hover {
-    background-color: #504dffb3; 
-    border: black;
+    background-color: #424b6b;
+    color: white;
 }

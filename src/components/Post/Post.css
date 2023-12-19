@@ -21,7 +21,6 @@
 .post video {
     max-width: 100%; 
     max-height: 90%;
-    
     height: auto;
 }
 
@@ -33,7 +32,7 @@
     height: 35rem;
     width: 100%;
     overflow: hidden;
-    background-color: #6d6bffbc;
+    background-color: #7da1c4;
 }
 
 .active .post .score {
@@ -63,7 +62,7 @@
 }
 
 .inactive .post:hover {
-    background-color: #807efecb;
+    background-color: #7da1c4;
     box-shadow: #393863;
 }
 
@@ -83,19 +82,15 @@
 }
 
 .inactive:hover .post .score {
-    background-color: #5b5ba8;
+    background-color: #424b6b;
     color: white;
 }
 
 .active .post .score {
-    background-color: #5b5ba8;
+    background-color: #424b6b;
     color: white;
 }
 
-
-.post .score img {
-    width: 45%;
-}
 
 .inactive .post .score p {
     font-size: 70%;
@@ -178,6 +173,7 @@
     max-width: 90%;
     max-height: 90%;
     padding-bottom: 0;
+    border-radius: 4pt;
 }
 
 .active .content .link {
@@ -203,7 +199,7 @@
    margin-top: 0;
 }
 
-.inactive .comments-button {
+.inactive .comments-toggle {
     display: none;
 }
 
@@ -219,7 +215,7 @@
     display: none;
 }
 
-.active .post .comments-button {
+.active .post .comments-toggle {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -234,17 +230,10 @@
     background-color: rgb(185, 185, 185);
 }
 
-.active .post .comments-button:hover {
+.active .post .comments-toggle:hover {
     background-color: rgb(138, 138, 138);
 }
 
-.active .post .comments-button .comment-icon {
-    border-radius: 0;
-    height: 70%;
-    padding-bottom: 0;
-    margin-bottom: 0;
-
-}
 
 .active #comments {
     overflow: scroll;
@@ -275,7 +264,7 @@
         height: 70vw;
     }
 
-    .active .post .comments-button {
+    .active .post .comments-toggle {
         position: relative;
         margin-top: 61vw;
         margin-left: 0;

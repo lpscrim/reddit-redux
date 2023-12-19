@@ -21,7 +21,7 @@ export const Subreddit = (props) => {
     };
 
     return (
-        <li >
+        <li>
             <button onClick={handleClick}>
                 <span>{name}</span>
             </button>
