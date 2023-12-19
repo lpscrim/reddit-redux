@@ -125,8 +125,8 @@ export const Post = (props) => {
 
     if (posts.commentsLoading) {
         return (
-            <div className={isActive} id={props.title} onClick={handleClick}>
-                <li className="post" id={isActive}>
+            <li className={isActive} id={props.title} onClick={handleClick}>
+                <div className="post" id={isActive}>
                     <div className="left-side">
                         <img src={thumbnail} alt=""></img>
                     </div>
@@ -149,7 +149,7 @@ export const Post = (props) => {
                         <ArrowCircleUp size={24} />
                         <p>{props.score}</p>
                     </div>
-                </li>
+                </div>
                 <div className={showComments} id="comments">
                     <CommentsLoading />
                     <CommentsLoading />
@@ -159,13 +159,13 @@ export const Post = (props) => {
                     <CommentsLoading />
                     <CommentsLoading />
                 </div>
-            </div>
+            </li>
         )
     } else {
 
     return (
-        <div className={isActive} id={props.title} onClick={handleClick} ref={ref}>
-            <li className="post" id={isActive}>
+        <li className={isActive} id={props.title} onClick={handleClick} ref={ref}>
+            <div className="post" id={isActive}>
                 <div className="left-side">
                     <img src={thumbnail} alt=""></img>
                 </div>
@@ -188,12 +188,12 @@ export const Post = (props) => {
                     <ArrowCircleUp size={24} />
                     <p>{props.score}</p>
                 </div>
-            </li>
+            </div>
             <div className={showComments} id="comments">
                 <ul>
                     {commentList}
                 </ul>
             </div>
-        </div>
+        </li>
     )}
 }

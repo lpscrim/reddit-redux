@@ -47,7 +47,9 @@ export const Posts = () => {
         return (
             <div className="posts">
                 <ul>
-                    <h3 className="posts-title">Showing '{filter}' posts in ({selectedSubreddit})</h3>
+                    <li>
+                        <h3 className="posts-title">Showing '{filter}' posts in ({selectedSubreddit})</h3>
+                    </li>
                     {posts.posts.map(({ 
                         title, 
                         subreddit_name_prefixed: subreddit, 

@@ -5,7 +5,7 @@ import "./SearchResults.css";
 export const ResultsLoading = () => {
     return (
         <ul className="results-list">
-            <div className="loader">
+            <li className="loader">
                         <SpinnerGap size={28}>
                             <animateTransform
                                 attributeName="transform"
@@ -17,8 +17,8 @@ export const ResultsLoading = () => {
                                 repeatCount="indefinite"
                             ></animateTransform>
                         </SpinnerGap>
-            </div>
-            <div className="loader">
+            </li>
+            <li className="loader">
                         <SpinnerGap size={28}>
                             <animateTransform
                                 attributeName="transform"
@@ -30,8 +30,8 @@ export const ResultsLoading = () => {
                                 repeatCount="indefinite"
                             ></animateTransform>
                         </SpinnerGap>
-            </div>
-            <div className="loader">
+            </li>
+            <li className="loader">
                         <SpinnerGap size={28}>
                             <animateTransform
                                 attributeName="transform"
@@ -43,8 +43,8 @@ export const ResultsLoading = () => {
                                 repeatCount="indefinite"
                             ></animateTransform>
                         </SpinnerGap>
-            </div>
-            <div className="loader">
+            </li>
+            <li className="loader">
                         <SpinnerGap size={28}>
                             <animateTransform
                                 attributeName="transform"
@@ -56,8 +56,8 @@ export const ResultsLoading = () => {
                                 repeatCount="indefinite"
                             ></animateTransform>
                         </SpinnerGap>
-            </div>
-            <div className="loader">
+            </li>
+            <li className="loader">
                         <SpinnerGap size={28}>
                             <animateTransform
                                 attributeName="transform"
@@ -69,7 +69,7 @@ export const ResultsLoading = () => {
                                 repeatCount="indefinite"
                             ></animateTransform>
                         </SpinnerGap>
-            </div>
+            </li>
         </ul>
     )
 }
