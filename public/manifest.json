@@ -3,7 +3,7 @@
   "name": "Reddit app",
   "icons": [
     {
-      "src": "public/favicon.png",
+      "src": "/favicon.png",
       "sizes": "512x512",
       "type": "image/png"
     }

@@ -157,12 +157,11 @@
 
 .post .right-side .bottom .title {
     width: 92%;
-    font-size: 1.3rem;
-    font-weight: 500;
+    font-size: 1.5rem;
+    font-weight: 600;
     padding-top: 0;
     margin-top: 0;
     margin-left: 1rem;
-    font-weight: 300;
 }
 
 .inactive .content {
@@ -245,11 +244,11 @@
     .post .right-side .bottom .title {
         margin-top: 0;
         margin-left: 1vw;
-        font-size: 2.5vw;
+        font-size: 3vw;
     }
 
     .post .right-side .top .author {
-        font-size: 1.5vw;
+        font-size: 1.6vw;
     }
 
     .post .right-side .top .subreddit {

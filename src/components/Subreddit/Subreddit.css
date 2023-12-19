@@ -8,6 +8,6 @@ button {
 
 @media (max-width: 480px) {
     button {
-        font-size: 115%;
+        font-size: 105%;
     }
 }
