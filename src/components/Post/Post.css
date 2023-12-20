@@ -159,7 +159,7 @@
 
 .post .right-side .bottom .title {
     width: 92%;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: 600;
     padding-top: 0;
     margin-top: 0;
@@ -242,6 +242,27 @@
     max-height: 25rem;
 }
 
+@media (max-width: 860px) {
+    .inactive .post .score {
+        width: 10%;
+    }
+
+    .active .post .score {
+        width: 10%;
+    }
+
+}
+
+@media (max-width: 670px) {
+    .inactive .post .score {
+        width: 15%;
+    }
+
+    .active .post .score {
+        width: 15%;
+    }
+
+}
 @media (max-width: 480px) {
     .post .right-side .bottom .title {
         margin-top: 0;
@@ -274,6 +295,15 @@
         width: 6vw;
         font-size: .01vw;
     }
+
+    .inactive .post .score {
+        width: 10%;
+    }
+
+    .active .post .score {
+        width: 10%;
+    }
+
 
     .inactive .post .score p {
         font-size: 1.5vw;
