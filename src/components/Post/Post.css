@@ -46,6 +46,8 @@
     background-color: #161627;
     border-top-right-radius: 3pt;
     border-bottom-right-radius: 3pt;
+    background-color: #424b6b;
+    color: white;
 }
 
 .active .post .content {
@@ -86,18 +88,18 @@
     color: white;
 }
 
-.active .post .score {
-    background-color: #424b6b;
-    color: white;
-}
 
 
 .inactive .post .score p {
-    font-size: 70%;
+    font-size: 85%;
 }
 
 .active .post .score p {
     font-size: 85%;
+}
+
+.post .score p {
+    font-weight:600;
 }
 
 .post .left-side {
@@ -157,12 +159,11 @@
 
 .post .right-side .bottom .title {
     width: 92%;
-    font-size: 1.3rem;
-    font-weight: 500;
+    font-size: 1.4rem;
+    font-weight: 600;
     padding-top: 0;
     margin-top: 0;
     margin-left: 1rem;
-    font-weight: 300;
 }
 
 .inactive .content {
@@ -241,15 +242,36 @@
     max-height: 25rem;
 }
 
+@media (max-width: 860px) {
+    .inactive .post .score {
+        width: 10%;
+    }
+
+    .active .post .score {
+        width: 10%;
+    }
+
+}
+
+@media (max-width: 670px) {
+    .inactive .post .score {
+        width: 15%;
+    }
+
+    .active .post .score {
+        width: 15%;
+    }
+
+}
 @media (max-width: 480px) {
     .post .right-side .bottom .title {
         margin-top: 0;
         margin-left: 1vw;
-        font-size: 2.5vw;
+        font-size: 3vw;
     }
 
     .post .right-side .top .author {
-        font-size: 1.5vw;
+        font-size: 1.6vw;
     }
 
     .post .right-side .top .subreddit {
@@ -273,6 +295,15 @@
         width: 6vw;
         font-size: .01vw;
     }
+
+    .inactive .post .score {
+        width: 10%;
+    }
+
+    .active .post .score {
+        width: 10%;
+    }
+
 
     .inactive .post .score p {
         font-size: 1.5vw;

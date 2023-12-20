@@ -16,6 +16,7 @@ export const Post = (props) => {
     const posts = useSelector((state) => state.posts);
     let commentList = '';
     let thumbnail = '';
+    let score = '';
     const ref = useRef(null);
 
     const handleOffClick = (e) => {
@@ -64,6 +65,11 @@ export const Post = (props) => {
         thumbnail = '/nsfw.png';
     }
 
+    if(props.score > 9999) {
+        const string = props.score.toString();
+        const slice =  string.slice(0,2) + '.' + string.slice(2)
+        score = slice.slice(0,4) + 'k'
+    } else score = props.score;
 
     const content = () => {
 
@@ -125,8 +131,8 @@ export const Post = (props) => {
 
     if (posts.commentsLoading) {
         return (
-            <div className={isActive} id={props.title} onClick={handleClick}>
-                <li className="post" id={isActive}>
+            <li className={isActive} id={props.title} onClick={handleClick}>
+                <div className="post" id={isActive}>
                     <div className="left-side">
                         <img src={thumbnail} alt=""></img>
                     </div>
@@ -147,9 +153,9 @@ export const Post = (props) => {
                     </button>
                     <div className="score">
                         <ArrowCircleUp size={24} />
-                        <p>{props.score}</p>
+                        <p>{score}</p>
                     </div>
-                </li>
+                </div>
                 <div className={showComments} id="comments">
                     <CommentsLoading />
                     <CommentsLoading />
@@ -159,13 +165,13 @@ export const Post = (props) => {
                     <CommentsLoading />
                     <CommentsLoading />
                 </div>
-            </div>
+            </li>
         )
     } else {
 
     return (
-        <div className={isActive} id={props.title} onClick={handleClick} ref={ref}>
-            <li className="post" id={isActive}>
+        <li className={isActive} id={props.title} onClick={handleClick} ref={ref}>
+            <div className="post" id={isActive}>
                 <div className="left-side">
                     <img src={thumbnail} alt=""></img>
                 </div>
@@ -185,15 +191,15 @@ export const Post = (props) => {
                     <Chats size={28} />Comments
                 </button>
                 <div className="score">
-                    <ArrowCircleUp size={24} />
-                    <p>{props.score}</p>
+                    <ArrowCircleUp size={"55%"} />
+                    <p>{score}</p>
                 </div>
-            </li>
+            </div>
             <div className={showComments} id="comments">
                 <ul>
                     {commentList}
                 </ul>
             </div>
-        </div>
+        </li>
     )}
 }
