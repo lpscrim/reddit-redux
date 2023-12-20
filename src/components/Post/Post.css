@@ -46,6 +46,8 @@
     background-color: #161627;
     border-top-right-radius: 3pt;
     border-bottom-right-radius: 3pt;
+    background-color: #424b6b;
+    color: white;
 }
 
 .active .post .content {
@@ -86,18 +88,18 @@
     color: white;
 }
 
-.active .post .score {
-    background-color: #424b6b;
-    color: white;
-}
 
 
 .inactive .post .score p {
-    font-size: 70%;
+    font-size: 85%;
 }
 
 .active .post .score p {
     font-size: 85%;
+}
+
+.post .score p {
+    font-weight:600;
 }
 
 .post .left-side {

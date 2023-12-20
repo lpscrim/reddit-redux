@@ -16,6 +16,7 @@ export const Post = (props) => {
     const posts = useSelector((state) => state.posts);
     let commentList = '';
     let thumbnail = '';
+    let score = '';
     const ref = useRef(null);
 
     const handleOffClick = (e) => {
@@ -64,6 +65,11 @@ export const Post = (props) => {
         thumbnail = '/nsfw.png';
     }
 
+    if(props.score > 9999) {
+        const string = props.score.toString();
+        const slice =  string.slice(0,2) + '.' + string.slice(2)
+        score = slice.slice(0,4) + 'k'
+    } else score = props.score;
 
     const content = () => {
 
@@ -147,7 +153,7 @@ export const Post = (props) => {
                     </button>
                     <div className="score">
                         <ArrowCircleUp size={24} />
-                        <p>{props.score}</p>
+                        <p>{score}</p>
                     </div>
                 </div>
                 <div className={showComments} id="comments">
@@ -185,8 +191,8 @@ export const Post = (props) => {
                     <Chats size={28} />Comments
                 </button>
                 <div className="score">
-                    <ArrowCircleUp size={24} />
-                    <p>{props.score}</p>
+                    <ArrowCircleUp size={"55%"} />
+                    <p>{score}</p>
                 </div>
             </div>
             <div className={showComments} id="comments">
