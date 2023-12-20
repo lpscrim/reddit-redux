@@ -35,15 +35,15 @@ export const Filter = () => {
                 <p>Filter by:</p>
             </div>
             <div className="container">
-                <div className="card" id="top" onClick={handleClickTop}>
+                <div className="card" id="top" onClick={handleClickTop} data-testid="top-card">
                     <ChartLineUp className="img" size={40}/>
                     <p>Top</p>
                 </div>
-                <div className="card" id="best" onClick={handleClickBest}>
+                <div className="card" id="best" onClick={handleClickBest} data-testid="best-card">
                     <ThumbsUp className="img" size={40}/>
                     <p>Best</p>
                 </div>
-                <div className="card" id="new" onClick={handleClickNew}>
+                <div className="card" id="new" onClick={handleClickNew} data-testid="new-card">
                     <ShootingStar className="img" size={40}/>
                     <p>New</p>
                 </div>

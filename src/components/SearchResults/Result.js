@@ -13,7 +13,7 @@ export const Result = (props) => {
     }
 
     return (
-        <li className="result" onClick={handleClick}>
+        <li className="result" onClick={handleClick} >
             <div className="left">
                 <img src={props.icon} alt=""></img>
                 <h4>{props.name}</h4>

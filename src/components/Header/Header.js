@@ -34,7 +34,7 @@ export const Header = () => {
                 <RedditLogo size={38}/>
                 <h4>REDDIT?</h4>
             </div>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} data-testid="search-form">
                 <MagnifyingGlass size={28}/>
                 <input
                     className='search-bar'
