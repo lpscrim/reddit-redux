@@ -116,7 +116,7 @@ export const Post = (props) => {
     }
 
 
-    commentList = !posts.comments.length ? <NoComments /> : (
+    commentList = !posts.comments || !posts.comments.length ? <NoComments /> : (
         posts.comments.slice(0, 11).map(comment => {
             return (
                 <Comment
@@ -131,7 +131,7 @@ export const Post = (props) => {
 
     if (posts.commentsLoading) {
         return (
-            <li className={isActive} id={props.title} onClick={handleClick}>
+            <li className={isActive} id={props.title} onClick={handleClick} data-testid={'postShowing'}>
                 <div className="post" id={isActive}>
                     <div className="left-side">
                         <img src={thumbnail} alt=""></img>
@@ -170,7 +170,7 @@ export const Post = (props) => {
     } else {
 
     return (
-        <li className={isActive} id={props.title} onClick={handleClick} ref={ref}>
+        <li className={isActive} id={props.title} onClick={handleClick} ref={ref} data-testid={'postShowing'}>
             <div className="post" id={isActive}>
                 <div className="left-side">
                     <img src={thumbnail} alt=""></img>

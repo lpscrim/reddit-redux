@@ -6,6 +6,7 @@ import { PostsError } from "../PostsError/PostsError";
 import "./Posts.css";
 import { fetchPosts } from "../../features/postsSlice";
 
+
 export const Posts = () => {
 
     const dispatch = useDispatch();

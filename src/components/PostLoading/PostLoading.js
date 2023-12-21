@@ -4,7 +4,7 @@ import './PostLoading.css'
 
 export const PostLoading = () => {
     return (
-        <li className="post">
+        <li className="post" data-testid={'postLoading'}>
             <div className="score">
             </div>
             <div className="left-side">
