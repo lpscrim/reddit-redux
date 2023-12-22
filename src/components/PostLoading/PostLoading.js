@@ -8,12 +8,12 @@ export const PostLoading = () => {
             <div className="score">
             </div>
             <div className="left-side">
-                <img src='' alt='loading...'></img>
+        
             </div>
             <div className="right-side">
                 <div className="top">
                     <div className="loader">
-                        <SpinnerGap size={30}>
+                        <SpinnerGap size={42}>
                             <animateTransform
                                 attributeName="transform"
                                 attributeType="XML"
