@@ -14,7 +14,9 @@ describe('Posts Component err', () => {
       error: null,
       selectedSubreddit: 'mockedSubreddit',
       filter: 'mockedFilter',
-      posts: [],
+      posts: [
+        
+      ],
       searchTerm: '',
       comments: [],
       commentsLoading: false,
@@ -23,14 +25,6 @@ describe('Posts Component err', () => {
   };
   let store;
 
-  beforeEach(() => {
-    store = configureStore({
-      reducer: {
-        posts: postsReducer,
-      },
-      preloadedState: initialState,
-    });
-  });
 
   test('renders loading state and then posts', async () => {
     const { getAllByTestId, getByTestId, queryAllByTestId } = render(
