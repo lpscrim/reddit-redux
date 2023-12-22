@@ -25,6 +25,7 @@
     display: flex;
 }
 
+
 .subredditList button {
     position: relative;
     width: 100%;
@@ -38,6 +39,16 @@
     overflow: hidden;
     background-color: white;
     transition: background-color .5s, color .5s;
+}
+
+.subredditList li:first-of-type button {
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;;
+}
+
+.subredditList li:last-of-type button {
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
 }
 
 .subredditList button:hover {

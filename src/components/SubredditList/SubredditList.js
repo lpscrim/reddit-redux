@@ -10,7 +10,7 @@ export const SubredditList = () => {
     const dispatch = useDispatch();
     const subreddits = useSelector(selectSubreddits);
     const state = store.getState();
-    const subredditsList = subreddits.slice(0,16).map(sub => {
+    const subredditsList = subreddits.slice(0,25).map(sub => {
         return (
             <Subreddit 
                 name={sub.display_name_prefixed}

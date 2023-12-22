@@ -2,10 +2,11 @@
     padding: 0;
     margin: 0 .25rem 0 .25rem;
     width: 98%;
-    border-radius: 4pt;
+    border-radius: 8pt;
     background-color: white;
     transition-property: background-color;
     transition-duration: .5s;
+    font-weight: 600;
 }
 
 .filter-title {
