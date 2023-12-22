@@ -20,7 +20,7 @@ export const Header = () => {
     
     useEffect(() => {
         dispatch(fetchSearch(state.posts.searchTerm))
-    }, [state.posts.searchTerm]);
+    }, [dispatch, state.posts.searchTerm]);
 
     const handleSubmit = (event) => {
         event.preventDefault();
