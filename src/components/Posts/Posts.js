@@ -32,7 +32,6 @@ export const Posts = () => {
                     <PostLoading />
                     <PostLoading />
                     <PostLoading />
-                    <PostLoading />
                 </ul>
             </div>
         )
