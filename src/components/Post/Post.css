@@ -42,11 +42,9 @@
     justify-content: center;
     align-items: center;
     width: 7%;
+    flex: 0 0 7%; 
     height: 96.31%;
     padding-top: 1.5rem;
-    background-color: #161627;
-    border-top-right-radius: 3pt;
-    border-bottom-right-radius: 3pt;
     background-color: #424b6b;
     color: white;
 }
@@ -75,10 +73,9 @@
     justify-content: center;
     align-items: center;
     width: 7%;
+    flex: 0 0 7%; 
     height: 81.1%;
     padding-top: 1.5rem;
-    border-top-right-radius: 3pt;
-    border-bottom-right-radius: 3pt;
     background-color: #6e6e6ed0;
     color: rgb(0, 0, 0);
     transition: background-color .5s, color .5s;
