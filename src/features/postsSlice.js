@@ -23,7 +23,7 @@ export const fetchComments = createAsyncThunk(
 const initialState = {
     posts: [],
     searchTerm: '',
-    selectedSubreddit: 'r/pics/',
+    selectedSubreddit: 'r/Breadit/',
     filter: 'top',
     isLoading: false,
     error: false,
