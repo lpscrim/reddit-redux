@@ -16,7 +16,7 @@ describe('Header Component', () => {
     const { getByText, getByPlaceholderText } = render(<Wrapper />);
 
     // Check if the component renders the title
-    expect(getByText('REDDIT?')).toBeInTheDocument();
+    expect(getByText('BREADDDIT')).toBeInTheDocument();
 
     // Check if the component renders the search bar
     expect(getByPlaceholderText('Search Subreddits')).toBeInTheDocument();
