@@ -8,7 +8,6 @@ export const PostLoading = () => {
             <div className="score">
             </div>
             <div className="left-side">
-        
             </div>
             <div className="right-side">
                 <div className="top">
@@ -25,11 +24,7 @@ export const PostLoading = () => {
                             ></animateTransform>
                         </SpinnerGap>
                     </div>
-                </div>
-                <div className="bottom">
-                    <p className="subreddit"></p>  
-                    <p className="author" target='_blank'></p>                 
-                </div>
+                </div>            
             </div>
         </li>
     )

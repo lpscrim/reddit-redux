@@ -8,23 +8,3 @@
     height: 8rem;
     border-radius: 3pt;
 }
-.post:hover {
-    background-color: #2f2f53;
-}
-
-.post .score {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 4%;
-    padding-top: 1.5rem;
-}
-
-.post .score img {
-    max-width: 65%;
-}
-
-.post .score p {
-    font-size: .65rem;
-}
