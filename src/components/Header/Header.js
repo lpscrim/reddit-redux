@@ -32,7 +32,7 @@ export const Header = () => {
         <div className='header'>
             <div className='title'>
                 <RedditLogo size={38}/>
-                <h4>REDDIT?</h4>
+                <h4>BREADDDIT</h4>
             </div>
             <form onSubmit={handleSubmit} data-testid="search-form">
                 <MagnifyingGlass size={28}/>
