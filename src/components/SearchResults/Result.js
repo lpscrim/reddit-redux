@@ -7,13 +7,13 @@ export const Result = (props) => {
 
     const dispatch = useDispatch();
 
-    const handleClick = () => {
+    const handleClickResult = () => {
         dispatch(setSelectedSubreddit(props.name));
         dispatch(setSearchTerm(''));
     }
 
     return (
-        <li className="result" onClick={handleClick} >
+        <li className="result" onMouseDown={handleClickResult} >
             <div className="left">
                 <img src={props.icon} alt=""></img>
                 <h4>{props.name}</h4>

@@ -42,7 +42,6 @@ export const postsSlice = createSlice({
         },
         setSelectedSubreddit: (state, action) => {
             state.selectedSubreddit = action.payload;
-//            state.searchTerm = '';
         },
         setFilter: (state, action) => {
             state.filter = action.payload;
