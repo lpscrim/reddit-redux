@@ -72,12 +72,10 @@ describe('Posts Component', () => {
           {
             id: 1,
             title: 'Test Post 1',
-            // ... other properties
           },
           {
             id: 2,
             title: 'Test Post 2',
-            // ... other properties
           },
         ],
       },
