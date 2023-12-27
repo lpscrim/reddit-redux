@@ -8,7 +8,7 @@ import { Post } from './Post';
 const mockStore = configureStore([thunk]);
 
 describe('Post component', () => {
-    it('renders comments loading correctly', () => {
+    it('renders no comments correctly', () => {
         const initialState = {
             posts: {
               isLoading: false,
@@ -42,7 +42,7 @@ describe('Post component', () => {
         expect(getByText('No Comments...')).toBeInTheDocument();
       })
 
-      it('renders no comments correctly', () => {
+      it('renders loading comments correctly', () => {
         const initialState = {
             posts: {
               isLoading: true,
@@ -77,7 +77,7 @@ describe('Post component', () => {
         
       })
 
-      it('comments correctly', () => {
+      it('renders comments correctly', () => {
         const initialState = {
             posts: {
               isLoading: null,
