@@ -28,10 +28,38 @@ describe('Posts Component', () => {
       </Provider>
     );
 
-    // Assuming you have a loading indicator with data-testid="postLoading"
     const loadingElements = getAllByTestId("postLoading");
     
     // Assert that the loading element is present
     expect(loadingElements.length).toBeGreaterThan(0);
   });
+
+  it('renders error state correctly', () => {
+    const initialState = {
+      posts: {
+        isLoading: null,
+        error: true,
+        selectedSubreddit: 'reactjs',
+        filter: 'hot',
+        posts: [],
+      },
+    };
+
+    const store = mockStore(initialState);
+
+    const { getByTestId } = render(
+      <Provider store={store}>
+        <Posts />
+      </Provider>
+    );
+
+    const errorElement = getByTestId("postError");
+    
+    // Assert that the error element is present
+    expect(errorElement).toBeInTheDocument();
+  });
+
+
+
 });
+
