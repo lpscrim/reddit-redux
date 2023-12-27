@@ -117,8 +117,7 @@ describe('Post component', () => {
         );
 
         expect(getByText('This is a comment.')).toBeInTheDocument();
-      })
-
+      });
     })
 
     

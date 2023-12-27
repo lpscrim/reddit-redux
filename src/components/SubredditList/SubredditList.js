@@ -27,8 +27,8 @@ export const SubredditList = () => {
 
     if(state.subreddits.isLoading) {
         return (
-            <div className="subredditList">
-            <ul data-testid='loader'>
+            <div className="subredditList" data-testid='loader'>
+            <ul>
                     <li ><button></button></li>
                     <li><button></button></li>
                     <li><button></button></li>
