@@ -4,7 +4,7 @@ import { ArrowCircleUp } from "@phosphor-icons/react";
 
 export const Comment = (props) => {
     return (
-        <div className="comment">
+        <div className="comment" data-testid={'comment'}>
             <div className="top">
                 <p className="author">u/{props.author}</p>
                 <div className="score">
