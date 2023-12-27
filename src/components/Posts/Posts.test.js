@@ -61,5 +61,43 @@ describe('Posts Component', () => {
 
 
 
+  it('renders posts correctly', () => {
+    const initialState = {
+      posts: {
+        isLoading: false,
+        error: null,
+        selectedSubreddit: 'reactjs',
+        filter: 'hot',
+        posts: [
+          {
+            id: 1,
+            title: 'Test Post 1',
+            // ... other properties
+          },
+          {
+            id: 2,
+            title: 'Test Post 2',
+            // ... other properties
+          },
+        ],
+      },
+    };
+
+    const store = mockStore(initialState);
+
+    const { getByText } = render(
+      <Provider store={store}>
+        <Posts />
+      </Provider>
+    );
+
+    // Assert that the posts are present
+    expect(getByText('Test Post 1')).toBeInTheDocument();
+    expect(getByText('Test Post 2')).toBeInTheDocument();
+  });
+
 });
+
+
+
 
