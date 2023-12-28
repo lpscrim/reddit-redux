@@ -12,18 +12,8 @@ describe('SubredditList component', () => {
     const initialState = {
       subreddits: {
         isLoading: true,
-        subreddits: [
-            {
-              id: 'subreddit1',
-              display_name_prefixed: 'r/subreddit1',
-              icon_img: 'subreddit1-icon.png',
-            },
-            {
-              id: 'subreddit2',
-              display_name_prefixed: 'r/subreddit2',
-              icon_img: 'subreddit2-icon.png',
-            },
-        ],
+        subreddits: [],
+        error: null,
       },
     };
 
@@ -36,6 +26,26 @@ describe('SubredditList component', () => {
     );
 
     expect(getByTestId('loader')).toBeInTheDocument();
+  });
+
+  it('renders error state correctly', () => {
+    const initialState = {
+      subreddits: {
+        isLoading: false,
+        subreddits: [],
+        error: true,
+      },
+    };
+
+    const store = mockStore(initialState);
+
+    const { getByText } = render(
+      <Provider store={store}>
+        <SubredditList />
+      </Provider>
+    );
+
+    expect(getByText('Error loading Subs!')).toBeInTheDocument();
   });
 
   it('renders subreddits correctly', () => {
@@ -54,6 +64,7 @@ describe('SubredditList component', () => {
             icon_img: 'subreddit2-icon.png',
           },
         ],
+        error: null,
       },
     };
 

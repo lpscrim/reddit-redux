@@ -11,7 +11,7 @@ export const fetchSubreddits = createAsyncThunk(
 const initialState = {
     subreddits: [],
     isLoading: true,
-    error: false
+    error: false,
 };
 
 export const subredditsSlice = createSlice({

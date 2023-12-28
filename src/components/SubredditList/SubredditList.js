@@ -1,16 +1,16 @@
 import { React, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { selectSubreddits, fetchSubreddits } from "../../features/subredditsSlice";
-import store from "../../store/store";
+import { fetchSubreddits } from "../../features/subredditsSlice";
 import { Subreddit } from "../Subreddit/Subreddit";
 import "./SubredditList.css";
 
 export const SubredditList = () => {
 
     const dispatch = useDispatch();
-    const subreddits = useSelector(selectSubreddits);
-    const state = store.getState();
-    const subredditsList = subreddits.slice(0,25).map(sub => {
+    const subreddits = useSelector((state) => state.subreddits);
+    const { isLoading, error } = subreddits;
+
+    const subredditsList = subreddits.subreddits.slice(0,25).map(sub => {
         return (
             <Subreddit 
                 name={sub.display_name_prefixed}
@@ -25,7 +25,7 @@ export const SubredditList = () => {
         dispatch(fetchSubreddits())
     }, [dispatch])
 
-    if(state.subreddits.isLoading) {
+    if(isLoading) {
         return (
             <div className="subredditList" data-testid='loader'>
             <ul>
@@ -44,13 +44,20 @@ export const SubredditList = () => {
           </div>
         )
     }
-    if (!state.subreddits.isLoading) {
+
+    if(error) {
         return (
-            <div className="subredditList">
-                <ul>
-                    {subredditsList}
-                </ul>
+            <div>
+                <p>Error loading Subs!</p>
             </div>
         )
     }
+
+    return (
+        <div className="subredditList">
+            <ul>
+                {subredditsList}
+            </ul>
+        </div>
+    )
 }
