@@ -4,7 +4,7 @@ import "./SearchResults.css";
 
 export const ResultsLoading = () => {
     return (
-        <ul className="results-list">
+        <ul className="results-list" data-testid="searchLoader">
             <li className="loader">
                         <SpinnerGap size={28}>
                             <animateTransform
