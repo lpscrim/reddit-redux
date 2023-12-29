@@ -25,7 +25,7 @@ export const SearchResults = () => {
     }
 
     if(results) {
-        resultsList = results.slice(0,6).map(result => {
+        resultsList = results.slice(0,6).map((result, index) => {
             const name = result.display_name_prefixed;
             const icon = result.icon_img;
             const subs = result.subscribers;
@@ -34,6 +34,8 @@ export const SearchResults = () => {
                     name={name}
                     icon={icon}
                     subs={subs}
+                    resultkey={index}
+                    key={index}
                 />
             )
         })

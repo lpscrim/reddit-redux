@@ -13,7 +13,7 @@ export const Result = (props) => {
     }
 
     return (
-        <li className="result" onMouseDown={handleClickResult} data-testid="result">
+        <li className="result" onMouseDown={handleClickResult} data-testid="result" data-resultkey={props.resultkey}>
             <div className="left">
                 <img src={props.icon} alt=""></img>
                 <h4>{props.name}</h4>
