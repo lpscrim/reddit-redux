@@ -1,14 +1,14 @@
-import React from 'react';
-import { render } from '@testing-library/react';
-import { Provider } from 'react-redux';
-import configureStore from 'redux-mock-store';
-import thunk from 'redux-thunk';
-import { SubredditList } from './SubredditList';
+import React from "react";
+import { render } from "@testing-library/react";
+import { Provider } from "react-redux";
+import configureStore from "redux-mock-store";
+import thunk from "redux-thunk";
+import { SubredditList } from "./SubredditList";
 
 const mockStore = configureStore([thunk]);
 
-describe('SubredditList component', () => {
-  it('renders loading state correctly', () => {
+describe("SubredditList component", () => {
+  it("renders loading state correctly", () => {
     const initialState = {
       subreddits: {
         isLoading: true,
@@ -25,10 +25,10 @@ describe('SubredditList component', () => {
       </Provider>
     );
 
-    expect(getByTestId('loader')).toBeInTheDocument();
+    expect(getByTestId("loader")).toBeInTheDocument();
   });
 
-  it('renders error state correctly', () => {
+  it("renders error state correctly", () => {
     const initialState = {
       subreddits: {
         isLoading: false,
@@ -45,23 +45,23 @@ describe('SubredditList component', () => {
       </Provider>
     );
 
-    expect(getByText('Error loading Subs!')).toBeInTheDocument();
+    expect(getByText("Error loading Subs!")).toBeInTheDocument();
   });
 
-  it('renders subreddits correctly', () => {
+  it("renders subreddits correctly", () => {
     const initialState = {
       subreddits: {
         isLoading: false,
         subreddits: [
           {
-            id: 'subreddit1',
-            display_name_prefixed: 'r/subreddit1',
-            icon_img: 'subreddit1-icon.png',
+            id: "subreddit1",
+            display_name_prefixed: "r/subreddit1",
+            icon_img: "subreddit1-icon.png",
           },
           {
-            id: 'subreddit2',
-            display_name_prefixed: 'r/subreddit2',
-            icon_img: 'subreddit2-icon.png',
+            id: "subreddit2",
+            display_name_prefixed: "r/subreddit2",
+            icon_img: "subreddit2-icon.png",
           },
         ],
         error: null,
@@ -76,9 +76,7 @@ describe('SubredditList component', () => {
       </Provider>
     );
 
-      expect(getByText('r/subreddit1')).toBeInTheDocument();
-      expect(getByText('r/subreddit2')).toBeInTheDocument();
+    expect(getByText("r/subreddit1")).toBeInTheDocument();
+    expect(getByText("r/subreddit2")).toBeInTheDocument();
   });
-  
 });
-

@@ -1,14 +1,14 @@
-import React from 'react';
-import { render } from '@testing-library/react';
-import { Provider } from 'react-redux';
-import configureStore from 'redux-mock-store';
-import thunk from 'redux-thunk';
-import { SearchResults } from './SearchResults';
+import React from "react";
+import { render } from "@testing-library/react";
+import { Provider } from "react-redux";
+import configureStore from "redux-mock-store";
+import thunk from "redux-thunk";
+import { SearchResults } from "./SearchResults";
 
 const mockStore = configureStore([thunk]);
 
-describe('SearchResults component', () => {
-  it('renders search results loading', () => {
+describe("SearchResults component", () => {
+  it("renders search results loading", () => {
     const initialState = {
       search: {
         isLoading: true,
@@ -21,15 +21,14 @@ describe('SearchResults component', () => {
 
     const { getByTestId } = render(
       <Provider store={store}>
-            <SearchResults />
+        <SearchResults />
       </Provider>
     );
 
-
-    expect(getByTestId('searchLoader')).toBeInTheDocument();
+    expect(getByTestId("searchLoader")).toBeInTheDocument();
   });
 
-  it('renders search error', () => {
+  it("renders search error", () => {
     const initialState = {
       search: {
         isLoading: false,
@@ -42,28 +41,26 @@ describe('SearchResults component', () => {
 
     const { getByText } = render(
       <Provider store={store}>
-            <SearchResults />
+        <SearchResults />
       </Provider>
     );
 
-
-    expect(getByText('Search Error!')).toBeInTheDocument();
+    expect(getByText("Search Error!")).toBeInTheDocument();
   });
 
-    
-  it('renders results', () => {
+  it("renders results", () => {
     const initialState = {
       search: {
         isLoading: false,
         results: [
-            {
-                display_name_prefixed: 'Sample Result 1',
-                subscribers: '123',
-            },
-            {
-                display_name_prefixed: 'Sample Result 2',
-                subscribers: '456',
-            },
+          {
+            display_name_prefixed: "Sample Result 1",
+            subscribers: "123",
+          },
+          {
+            display_name_prefixed: "Sample Result 2",
+            subscribers: "456",
+          },
         ],
         error: null,
       },
@@ -73,16 +70,15 @@ describe('SearchResults component', () => {
 
     const { getByText } = render(
       <Provider store={store}>
-            <SearchResults />
+        <SearchResults />
       </Provider>
     );
 
-
-    expect(getByText('Sample Result 1')).toBeInTheDocument();
-    expect(getByText('Sample Result 2')).toBeInTheDocument();
+    expect(getByText("Sample Result 1")).toBeInTheDocument();
+    expect(getByText("Sample Result 2")).toBeInTheDocument();
   });
 
-  it('renders no results', () => {
+  it("renders no results", () => {
     const initialState = {
       search: {
         isLoading: false,
@@ -94,14 +90,10 @@ describe('SearchResults component', () => {
 
     const { getByText } = render(
       <Provider store={store}>
-            <SearchResults />
+        <SearchResults />
       </Provider>
     );
 
-
-    expect(getByText(('No Subreddits found!'))).toBeInTheDocument();
+    expect(getByText("No Subreddits found!")).toBeInTheDocument();
   });
-
 });
-
-
