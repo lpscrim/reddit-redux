@@ -109,8 +109,8 @@
 }
 
 .post .left-side img {
-    max-height: 80%;
-    max-width: 80%;
+    height: 80%;
+    width: 80%;
     border-radius: 4pt;
 }
 
