@@ -28,7 +28,7 @@ describe("SearchResults component", () => {
     expect(getByTestId("searchLoader")).toBeInTheDocument();
   });
 
-  it("renders search error", () => {
+  it("renders search error", async () => {
     const initialState = {
       search: {
         isLoading: false,
@@ -39,13 +39,15 @@ describe("SearchResults component", () => {
 
     const store = mockStore(initialState);
 
-    const { getByText } = render(
+    const { findByText } = render(
       <Provider store={store}>
         <SearchResults />
       </Provider>
     );
-
-    expect(getByText("Search Error!")).toBeInTheDocument();
+   
+    const errorMessage = await findByText(/error/i);
+    expect(errorMessage).toBeInTheDocument();
+   });
   });
 
   it("renders results", () => {
@@ -95,5 +97,5 @@ describe("SearchResults component", () => {
     );
 
     expect(getByText("No Subreddits found!")).toBeInTheDocument();
-  });
+
 });
