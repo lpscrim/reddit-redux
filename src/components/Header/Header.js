@@ -39,6 +39,7 @@ export const Header = () => {
       <form onSubmit={handleSubmit} data-testid="search-form">
         <MagnifyingGlass size={28} />
         <input
+          id='input'
           className="search-bar"
           onChange={handleChange}
           placeholder="Search Subreddits"
