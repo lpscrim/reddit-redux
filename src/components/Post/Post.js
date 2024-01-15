@@ -79,7 +79,7 @@ export const Post = (props) => {
 
     if (props.mediaType === "hosted:video") {
       return (
-        <video className="reddit-video" controls>
+        <video className="reddit-video" preload="none" controls >
           <source
             src={props.media.reddit_video.fallback_url}
             type="video/mp4"
