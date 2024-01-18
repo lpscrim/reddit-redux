@@ -191,7 +191,8 @@
 }
 
 .active .content .gallery img {
-    width: 100%;
+    max-width: 100%;
+    height: auto;
 }
 .active .content .text {
     font-size: 1rem;

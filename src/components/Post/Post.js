@@ -110,7 +110,7 @@ export const Post = (props) => {
         <div className="gallery">
           <p>Click for full gallery</p>
           <a href={thumbnail} target="_blank" rel="noreferrer">
-            <img src={thumbnail} alt="" width="100%" height="auto"></img>
+            <img src={thumbnail} alt="" maxwidth="100%" height="auto"></img>
           </a>
         </div>
       );
