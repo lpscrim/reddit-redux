@@ -62,8 +62,14 @@ export const Post = (props) => {
   if (props.thumbnail) {
     thumbnail = props.thumbnail;
   }
-  if (thumbnail.includes("nsfw")) {
+  if (props.thumbnail.includes("nsfw")) {
     thumbnail = "/nsfw.png";
+  }
+  if (props.thumbnail.includes("spoiler")) {
+    thumbnail = "/warning.png";
+  }
+  if (props.thumbnail.includes('external') || props.thumbnail.includes('self') || props.thumbnail.includes('default') || !props.thumbnail) {
+    thumbnail = "/favicon.png";
   }
 
   if (props.score > 9999) {
