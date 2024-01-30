@@ -80,7 +80,7 @@ export const Post = (props) => {
 
   const content = () => {
     if (props.mediaType === "image") {
-      return <img src={props.fullImage} alt="" loading='lazy' width="100%" height="auto"></img>;
+      return <img src={props.fullImage} alt="" loading='lazy' width="auto" height="auto"></img>;
     }
 
     if (props.mediaType === "hosted:video") {
@@ -99,7 +99,7 @@ export const Post = (props) => {
         <div className="link">
           <p>Click for full article</p>
           <a href={thumbnail} target="_blank" rel="noreferrer">
-            <img src={thumbnail} alt="" width="100%" height="auto"></img>
+            <img src={thumbnail} alt="" width="auto" height="auto"></img>
           </a>
         </div>
       );
@@ -110,7 +110,7 @@ export const Post = (props) => {
         <div className="gallery">
           <p>Click for full gallery</p>
           <a href={thumbnail} target="_blank" rel="noreferrer">
-            <img src={thumbnail} alt="" maxwidth="100%" height="auto"></img>
+            <img src={thumbnail} alt="" width="auto" height="auto"></img>
           </a>
         </div>
       );
