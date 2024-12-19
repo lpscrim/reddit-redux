@@ -53,7 +53,7 @@ export const Posts = () => {
               author,
               thumbnail,
               score,
-              url: fullImage,
+              url,
               url_overridden_by_dest: gif,
               post_hint: mediaType,
               domain,
@@ -70,7 +70,7 @@ export const Posts = () => {
                 author={author}
                 thumbnail={thumbnail}
                 score={score}
-                fullImage={fullImage}
+                url={url}
                 gif={gif}
                 mediaType={mediaType}
                 domain={domain}
