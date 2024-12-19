@@ -8,6 +8,7 @@
     overflow: hidden;
     border-radius: 8pt;
     transition: background-color .5s;
+    padding-bottom: 1rem;
 }
 
 .post:hover {
@@ -17,6 +18,15 @@
 .post:hover .score,
 .post:hover ~ .score {
     visibility: visible !important;
+}
+
+.post .score svg {
+    width: 1.5rem; 
+    height: 1.5rem; 
+}
+
+.post .score p {
+    margin-left: 0; 
 }
 
 .post video {
@@ -48,7 +58,7 @@
     justify-content: center;
     align-items: center;
     width: 7%;
-    height: 81.1%;
+    height: 110%;
     padding-top: 1.5rem;
     background-color: #6e6e6ed0;
     color: rgb(0, 0, 0);
@@ -75,9 +85,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 7%;
-    height: 96.31%;
-    padding-top: 1.5rem;
+
+    width: 8%;
+    height: 110%;
     background-color: #424b6b;
     color: white;
 }
@@ -99,10 +109,13 @@
 
 .active .content .link,
 .active .content .gallery {
-    height: 40%;
+    height: 90%;
+    padding-top: 30%;
+    width: 100%;
     text-align: center;
     margin: 0;
     padding-bottom: 7rem;
+
 }
 
 .active .content .gallery img {
@@ -128,7 +141,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 10%;
+    width: 20%;
     height: 100%;
 }
 
