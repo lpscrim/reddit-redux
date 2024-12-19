@@ -110,7 +110,7 @@
 .active .content .link,
 .active .content .gallery {
     height: 90%;
-    padding-top: 30%;
+    padding-top: 40%;
     width: 100%;
     text-align: center;
     margin: 0;
@@ -197,9 +197,16 @@
 /* Comments Toggle */
 .inactive .comments-toggle,
 .inactive .hidden,
-.inactive .show {
+.active .hidden {
     display: none;
 }
+
+.post .show {
+    display: block;
+}
+
+
+
 
 .active .post .comments-toggle {
     position: relative;
@@ -222,6 +229,7 @@
 
 .active #comments {
     overflow: scroll;
+    min-height: auto;
     max-height: 25rem;
 }
 

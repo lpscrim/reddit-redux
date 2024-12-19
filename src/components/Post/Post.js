@@ -127,10 +127,13 @@ export const Post = (props) => {
 
   commentList =
     !posts.comments || !posts.comments.length ? (
+      <div className={showComments} id="comments">
       <NoComments />
+      </div>
     ) : (
       posts.comments.slice(0, 11).map((comment) => {
         return (
+          
           <Comment
             key={comment.id}
             body={comment.body}
