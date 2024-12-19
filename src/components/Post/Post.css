@@ -37,7 +37,8 @@
 
 /* Inactive Post Styles */
 .inactive .post {
-    height: 8rem;
+    height: 100%;
+    min-height: 8rem;
     margin: .25rem 0 .35rem;
     background-color: #eceae6;
 }
