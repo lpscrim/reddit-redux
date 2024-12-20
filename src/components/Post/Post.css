@@ -42,13 +42,12 @@
     align-items: stretch;
     height: 11rem;
     margin: .25rem 0 .35rem;
-    background-color: #eceae6;
+    background-color: #fff1e2;
     
 }
 
 .inactive .post:hover {
-    background-color: #7da1c4;
-    box-shadow: #393863;
+    background-color: #ddba94;
 }
 
 .inactive .post .content {
@@ -68,14 +67,14 @@
     z-index: 9999;
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
-    background-color: #6e6e6ed0;
+    background-color: #fff1e2;
     color: rgb(0, 0, 0);
     transition: background-color .5s, color .5s;
 }
 
 .inactive:hover .post .score {
-    background-color: #424b6b;
-    color: white;
+    background-color: #e48e3e;
+    color: black;
 }
 
 .inactive .post .score p {
@@ -85,7 +84,7 @@
 /* Active Post Styles */
 .active .post {
     height: 34rem;
-    background-color: #7da1c4;
+    background-color: #ddba94;
     
 }
 
@@ -99,8 +98,8 @@
     padding: 2px;
     min-height: 110%;
     z-index: 9999;
-    background-color: #424b6b;
-    color: white;
+    background-color: #e2a164;
+    color: black;
     top: 0;
     bottom: 0;
 }

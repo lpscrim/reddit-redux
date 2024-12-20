@@ -3,7 +3,7 @@
     margin: 0 .25rem 0 .25rem;
     width: 98%;
     border-radius: 8pt;
-    background-color: #eceae6;
+    background-color: #fff1e2;
     transition-property: background-color;
     transition-duration: .5s;
     font-weight: 600;
@@ -35,22 +35,22 @@
     flex-direction: column;
     align-items: center;
     border-radius: 5pt;
-    background-color: #7da1c4;
+    background-color: #e48e3e;
     transition-property: background-color;
     transition-duration: .5s;
 }
 
 .filter .active {
-    background-color: #424b6b;
+    background-color: #eb7d16;
     color: white;
-    border: .5pt solid black;
+    border: .5pt solid white;
     transition-property: background-color;
     transition-duration: .5s;
 }
 
 .filter .card:hover {
     cursor: pointer;
-    background-color: #424b6b;
+    background-color: #eb7d16;
     color: white;
     transition-property: background-color;
     transition-duration: .5s;
@@ -58,7 +58,7 @@
 
 
 .filter .card:focus {
-    background-color: #424b6b;
+    background-color: #eb7d16;
     color: white;
     transition-property: background-color;
     transition-duration: .5s;

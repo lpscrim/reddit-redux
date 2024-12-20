@@ -37,7 +37,7 @@
     cursor: pointer;
     border: none;
     overflow: hidden;
-    background-color: #eceae6;
+    background-color: #fff1e2;
     transition: background-color .5s, color .5s;
 }
 
