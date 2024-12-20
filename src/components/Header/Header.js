@@ -8,7 +8,7 @@ import {
   setSelectedSubreddit,
 } from "../../features/postsSlice";
 import { SearchResults } from "../SearchResults/SearchResults";
-import { RedditLogo, MagnifyingGlass } from "@phosphor-icons/react";
+import { MagnifyingGlass } from "@phosphor-icons/react";
 import { fetchSearch } from "../../features/searchSlice";
 
 export const Header = () => {
@@ -33,8 +33,8 @@ export const Header = () => {
   return (
     <div className="header">
       <div className="title">
-        <RedditLogo size={38} />
-        <img alt="Logo of website name in bread"src="Bread.png" height="200px" width="auto"/>
+        <img src="logo.png" alt="logo of reddit with bread" height="50px" width="auto"/>
+        <img src="Bread.png" alt="website name in bread" height="200px" width="auto"/>
       </div>
       <form onSubmit={handleSubmit} data-testid="search-form">
         <MagnifyingGlass size={28} />
