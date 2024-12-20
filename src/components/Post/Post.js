@@ -176,7 +176,6 @@ export const Post = (props) => {
             onClick={(e) => toggleComments(e)}
           >
             <Chats size={28} />
-            Comments
           </button>
           <div className="score">
             <ArrowCircleUp size={24} />
@@ -227,7 +226,6 @@ export const Post = (props) => {
             onClick={(e) => toggleComments(e)}
           >
             <Chats size={28} />
-            Comments
           </button>
           <div className="score">
             <ArrowCircleUp size={"55%"} />

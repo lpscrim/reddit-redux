@@ -1,9 +1,7 @@
 .comment {
     background-color: rgba(62, 62, 62, 0.624);
     padding: .5rem;
-    margin-top: .25rem;
-    margin-bottom: .25rem;
-    margin-left: 1rem;
+    margin: .25rem 1rem;
     width: 93%;
     border-radius: 4px;
 }
