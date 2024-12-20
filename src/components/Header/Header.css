@@ -84,6 +84,11 @@
     display: none;
 }
 
+@media (max-width: 1000px) {
+    .search-symbol {
+        display: none;
+    }
+}
 @media (max-width: 480px) {
     .header {
       height: 2vw;
@@ -96,17 +101,13 @@
       margin-left: 1vw;
       margin-right: 0;
       padding-left: 1vw;
-      font-size: 3vw;
+      font-size: 12px;
     }
 }
 
 @media (max-width: 768px) {
     .header {
-      height: 8%;
-    }
-  
-    .search-symbol {
-        display: none;
+      height: 6%;
     }
     
     .header input {
