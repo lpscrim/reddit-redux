@@ -55,7 +55,7 @@
 }
 
 .header input:hover {
-    font-size: 1.2rem;
+    font-size: 0.75rem;
 }
 
 .header input:focus {
@@ -91,20 +91,24 @@
     }
 
     .header input {
-      width: 35vw;
+      width: 33vw;
       height: 5vw;
-      margin-left: 3vw;
+      margin-left: 1vw;
       margin-right: 0;
-      padding-left: 2vw;
+      padding-left: 1vw;
       font-size: 3vw;
     }
 }
 
 @media (max-width: 768px) {
     .header {
-      height: 8%;
+      height: 4%;
     }
   
+    .search-symbol {
+        display: none;
+    }
+    
     .header input {
       width: 25vw;
       height: 5vw;
@@ -113,6 +117,6 @@
     }
   
     .header input:focus {
-      font-size: .5rem;
+      font-size: 0.75rem;
     }
 }

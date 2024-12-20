@@ -37,7 +37,7 @@ export const Header = () => {
         <img src="Bread.png" alt="website name in bread" height="200px" width="auto"/>
       </div>
       <form onSubmit={handleSubmit} data-testid="search-form">
-        <MagnifyingGlass size={28} />
+        <MagnifyingGlass className="search-symbol" size={26} />
         <input
           id='input'
           className="search-bar"
