@@ -33,7 +33,7 @@ export const Header = () => {
   return (
     <div className="header">
       <div className="title">
-        <img src="logo.png" alt="logo of reddit with bread" height="50px" width="auto"/>
+        <img src="favicon.png" alt="logo of reddit with bread" height="50px" width="auto"/>
         <img src="Bread.png" alt="website name in bread" height="200px" width="auto"/>
       </div>
       <form onSubmit={handleSubmit} data-testid="search-form">
