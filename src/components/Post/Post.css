@@ -194,7 +194,10 @@
 .post .right-side .top .author {
     font-style: italic;
     margin-right: .5rem;
+    font-size: 12px;
 }
+
+
 
 .post .right-side .bottom {
     margin: 0;
@@ -283,11 +286,7 @@
 @media (max-width: 480px) {
     .post .right-side .bottom .title {
         margin-left: 1vw;
-        font-size: 3vw;
-    }
-
-    .post .right-side .top .author {
-        font-size: 1.6vw;
+        font-size: 12px;
     }
 
     .post .right-side .top .subreddit {
