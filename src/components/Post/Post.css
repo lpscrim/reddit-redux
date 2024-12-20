@@ -88,20 +88,20 @@
     
 }
 
+.active .post .left-side {
+    display: none;
+}
 .active .post .score {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 8%;
-    min-width: fit-content;
     padding: 2px;
     min-height: 110%;
     z-index: 9999;
     background-color: #e2862f;
     color: black;
-    top: 0;
-    bottom: 0;
 }
 
 .active .post .content {
@@ -122,7 +122,8 @@
 .active .content .link,
 .active .content .gallery {
     height: 90%;
-    width: 30%;
+    display: flex;
+    max-width: 30%;
     align-self: center;
     text-align: center;
     font-weight: 700;
@@ -131,7 +132,7 @@
 
 .active .content .link img,
 .active .content .gallery img {
-    width: 80%;
+    max-width: 80%;
     height: auto;
 }
 
@@ -173,6 +174,7 @@
     display: flex;
     width: 100%;
     margin: .5rem -1rem 0;
+    padding-left: 1rem;
 }
 
 .post .right-side .top p {
