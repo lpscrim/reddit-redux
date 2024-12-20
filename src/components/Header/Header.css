@@ -34,7 +34,7 @@
     margin-left: 0;
     margin-right: 10rem;
     border-radius: 5px;
-    padding-left: 2.3rem;
+    padding-left: 0.5rem;
     padding-top: .2rem;
     color: black;
     cursor: default;
@@ -114,10 +114,10 @@
       width: 20vw;
       height: 5vw;
       margin-right: 2vw;
-      font-size: 2vw;
+      font-size: 12px;
     }
   
     .header input:focus {
-      font-size: 1.5vw;
+      font-size: 12px;
     }
 }
