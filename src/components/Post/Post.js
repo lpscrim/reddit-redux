@@ -99,7 +99,7 @@ export const Post = (props) => {
         <div className="link">
           <p>Click for full article</p>
           <a href={props.url} target="_blank" rel="noreferrer">
-            <img src={thumbnail} alt="" width="auto" height="auto"></img>
+            <img src={thumbnail} alt="thumbnail of linked article" width="auto" height="auto"></img>
           </a>
         </div>
       );
@@ -110,7 +110,7 @@ export const Post = (props) => {
         <div className="gallery">
           <p>Click for full gallery</p>
           <a href={props.url} target="_blank" rel="noreferrer">
-            <img src={thumbnail} alt="" width="auto" height="auto"></img>
+            <img src={thumbnail} alt="thumbnail of gallery of images" width="auto" height="auto"></img>
           </a>
         </div>
       );
@@ -154,7 +154,7 @@ export const Post = (props) => {
       >
         <div className="post" id={isActive}>
           <div className="left-side">
-            <img src={thumbnail} alt="" width="100%" height="auto"></img>
+            <img src={thumbnail} alt="thumbnail of post content" width="100%" height="auto"></img>
           </div>
           <div className="right-side">
             <div className="top">
