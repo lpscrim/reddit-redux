@@ -34,7 +34,7 @@ export const Header = () => {
     <div className="header">
       <div className="title">
         <RedditLogo size={38} />
-        <img src="Bread.png" height="200px" width="auto"/>
+        <img alt="Logo of website name in bread"src="Bread.png" height="200px" width="auto"/>
       </div>
       <form onSubmit={handleSubmit} data-testid="search-form">
         <MagnifyingGlass size={28} />
