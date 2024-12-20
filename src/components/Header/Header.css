@@ -86,7 +86,7 @@
 
 @media (max-width: 480px) {
     .header {
-      height: 4vw;
+      height: 2vw;
       width: 98%;
     }
 
@@ -110,13 +110,13 @@
     }
     
     .header input {
-      width: 25vw;
+      width: 20vw;
       height: 5vw;
-      margin-right: 4vw;
+      margin-right: 2vw;
       font-size: 2vw;
     }
   
     .header input:focus {
-      font-size: 0.75rem;
+      font-size: 1.5vw;
     }
 }
