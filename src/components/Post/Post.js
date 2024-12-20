@@ -204,7 +204,7 @@ export const Post = (props) => {
       >
         <div className="post" id={isActive}>
           <div className="left-side">
-            <img src={thumbnail} alt="" width="300" height="auto"></img>
+            <img src={thumbnail} alt="" width="200" height="auto"></img>
           </div>
           <div className="right-side">
             <div className="top">
