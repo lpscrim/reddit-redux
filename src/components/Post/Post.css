@@ -47,7 +47,7 @@
 }
 
 .inactive .post:hover {
-    background-color: #ddba94;
+    background-color: #e6af68;
 }
 
 .inactive .post .content {
@@ -61,7 +61,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 7%;
+    width: 8%;
     height: 120%;
     box-sizing: border-box;
     z-index: 9999;
@@ -73,7 +73,7 @@
 }
 
 .inactive:hover .post .score {
-    background-color: #e48e3e;
+    background-color: #e2862f;
     color: black;
 }
 
@@ -84,7 +84,7 @@
 /* Active Post Styles */
 .active .post {
     height: 34rem;
-    background-color: #ddba94;
+    background-color: #e6af68;
     
 }
 
@@ -98,7 +98,7 @@
     padding: 2px;
     min-height: 110%;
     z-index: 9999;
-    background-color: #e2a164;
+    background-color: #e2862f;
     color: black;
     top: 0;
     bottom: 0;
