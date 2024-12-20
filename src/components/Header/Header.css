@@ -86,7 +86,7 @@
 
 @media (max-width: 480px) {
     .header {
-      height: 8vw;
+      height: 4vw;
       width: 98%;
     }
 
@@ -102,7 +102,7 @@
 
 @media (max-width: 768px) {
     .header {
-      height: 4%;
+      height: 8%;
     }
   
     .search-symbol {
