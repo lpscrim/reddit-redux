@@ -102,6 +102,7 @@
     z-index: 9999;
     background-color: #e2862f;
     color: black;
+    
 }
 
 .active .post .content {
@@ -166,7 +167,7 @@
 }
 
 .post .right-side {
-    width: 85%;
+    width: 95%;
     height: 100%;
 }
 
