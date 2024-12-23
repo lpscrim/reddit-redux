@@ -122,7 +122,7 @@
 .active .content .link,
 .active .content .gallery {
     height: 90%;
-    display: flex;
+    display: block;
     max-width: 30%;
     align-self: center;
     text-align: center;
@@ -194,8 +194,8 @@
 
 .post .right-side .top .author {
     font-style: italic;
-    margin-right: .5rem;
     font-size: 12px;
+    overflow: hidden;
 }
 
 
@@ -285,17 +285,20 @@
 }
 
 @media (max-width: 480px) {
-    .post .right-side .bottom .title {
-        margin-left: 1vw;
-        font-size: 12px;
+   .post .right-side .top .subreddit {
+        font-size: 2vw;
     }
 
-    .post .right-side .top .subreddit {
-        font-size: 2vw;
+    .post .right-side .bottom .title {
+        font-size: 0.8rem;
     }
 
     .active .post {
         height: 70vw;
+    }
+
+    .inactive .post {
+        height: 8rem;
     }
 
     .active .post .comments-toggle {
