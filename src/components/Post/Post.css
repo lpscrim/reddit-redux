@@ -141,7 +141,7 @@
     font-size: 1rem;
     height: 100%;
     width: 95%;
-    overflow: scroll;
+    overflow: auto;
 }
 
 /* Score Styles */
@@ -237,12 +237,12 @@
     cursor: pointer;
     border-radius: 4pt;
     font-size: .7rem;
-    background-color: rgb(185, 185, 185);
+    background-color: rgba(255, 110, 43, 0.877);
 }
 
 
 .active .post .comments-toggle:hover {
-    background-color: rgb(138, 138, 138);
+    background-color: rgba(255, 93, 43, 0.767);
 }
 
 .active #comments {
