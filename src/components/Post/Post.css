@@ -133,7 +133,8 @@
 
 .active .content .link img,
 .active .content .gallery img {
-    max-width: 80%;
+    max-width: 100%;
+    width: auto;
     height: auto;
 }
 
@@ -281,7 +282,16 @@
     .inactive .post {
         height: 10rem;
     }
-
+    .active .content .link img,
+    .active .content .gallery img {
+        width: 100%;
+        height: auto;
+    }
+    .active .content .link,
+    .active .content .gallery {
+        width: 80%;
+        max-width: 100%;
+    }
    
 }
 
